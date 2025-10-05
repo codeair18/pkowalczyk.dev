@@ -1,4 +1,4 @@
-# Strona Personal Brand
+# Strona pkowalczyk.dev
 
 Nowoczesna strona portfolio i CV zbudowana w Nuxt 3, prezentująca doświadczenie zawodowe, umiejętności i projekty z obsługą wielu języków i responsywnym designem.
 
