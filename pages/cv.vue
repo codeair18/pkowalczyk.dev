@@ -24,55 +24,55 @@ const experiencePl = ref([
       'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
     ],
     i8nCode: 'comperiaPay',
-    skills: ['PHP', 'Symfony', 'Vue', 'Nuxt', 'Docker', 'Node.js', 'Kubernetes', 'Google Cloud Platform']
+    skills: ['PHP', 'Symfony', 'JavaScript', 'Nuxt', 'Docker', 'Kubernetes', 'Google Cloud Platform']
   },
+  // {
+  //   jobPosition: 'Founder',
+  //   dateInterval: '04.2024 — __.____',
+  //   dateFrom: '04.2024',
+  //   dateTo: 'present',
+  //   companyName: 'Cvior',
+  //   isPartTime: true,
+  //   companyLink: 'https://cvior.com',
+  //   projects: [
+  //     {
+  //       name: 'Cvior',
+  //       url: 'https://cvior.com'
+  //     },
+  //   ],
+  //   i8nCode: 'cvior',
+  //   responsibilities: [
+  //     'Projektowanie, rozwój i utrzymanie aplikacji – zarządzam całym procesem wytwarzania oprogramowania.',
+  //     'Optymalizacja infrastruktury, zapewniająca <b>wysoką wydajność i skalowalność.</b>',
+  //     'Wdrożenie CI/CD oraz orkiestracja mikroserwisów w Kubernetesie.',
+  //   ],
+  //   skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js', 'Kubernetes']
+  // },
+  // {
+  //   jobPosition: 'Fullstack Developer',
+  //   dateInterval: '01.2023 — 06.2023',
+  //   dateFrom: '01.2023',
+  //   dateTo: '06.2023',
+  //   companyName: 'UmbrellAI',
+  //   isPartTime: true,
+  //   companyLink: 'https://umbrell.ai',
+  //   projectUrl: 'https://umbrell.ai',
+  //   projects: [
+  //     {
+  //       name: 'UmbrellAI',
+  //       url: 'https://umbrell.ai'
+  //     },
+  //   ],
+  //   i8nCode: 'umbrellAi',
+  //   responsibilities: [
+  //     'Rozwój aplikacji agregującej firmy ubezpieczeniowe, umożliwiającej zakup polis online.',
+  //     'Projektowanie oraz implementacja nowych funkcjonalności w <b>Vue, Nuxt, Node.js.</b>',
+  //     'Optymalizacja procesów backendowych i integracja z API firm ubezpieczeniowych.'
+  //   ],
+  //   skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js']
+  // },
   {
-    jobPosition: 'Founder',
-    dateInterval: '04.2024 — __.____',
-    dateFrom: '04.2024',
-    dateTo: 'present',
-    companyName: 'Cvior',
-    isPartTime: true,
-    companyLink: 'https://cvior.com',
-    projects: [
-      {
-        name: 'Cvior',
-        url: 'https://cvior.com'
-      },
-    ],
-    i8nCode: 'cvior',
-    responsibilities: [
-      'Projektowanie, rozwój i utrzymanie aplikacji – zarządzam całym procesem wytwarzania oprogramowania.',
-      'Optymalizacja infrastruktury, zapewniająca <b>wysoką wydajność i skalowalność.</b>',
-      'Wdrożenie CI/CD oraz orkiestracja mikroserwisów w Kubernetesie.',
-    ],
-    skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js', 'Kubernetes']
-  },
-  {
-    jobPosition: 'Fullstack Developer',
-    dateInterval: '01.2023 — 06.2023',
-    dateFrom: '01.2023',
-    dateTo: '06.2023',
-    companyName: 'UmbrellAI',
-    isPartTime: true,
-    companyLink: 'https://umbrell.ai',
-    projectUrl: 'https://umbrell.ai',
-    projects: [
-      {
-        name: 'UmbrellAI',
-        url: 'https://umbrell.ai'
-      },
-    ],
-    i8nCode: 'umbrellAi',
-    responsibilities: [
-      'Rozwój aplikacji agregującej firmy ubezpieczeniowe, umożliwiającej zakup polis online.',
-      'Projektowanie oraz implementacja nowych funkcjonalności w <b>Vue, Nuxt, Node.js.</b>',
-      'Optymalizacja procesów backendowych i integracja z API firm ubezpieczeniowych.'
-    ],
-    skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js']
-  },
-  {
-    jobPosition: 'Backend Developer',
+    jobPosition: 'PhP Developer',
     dateInterval: '2022 — 06.2023',
     dateFrom: '2022',
     dateTo: '06.2023',
@@ -82,28 +82,28 @@ const experiencePl = ref([
     i8nCode: 'silkyCoders',
     responsibilities: [
       'Przeprojektowanie <b>starych, mało wydajnych funkcjonalności</b> oraz rozwój systemu zarządzania produktami detalicznymi.',
-      'Implementacja <b>DDD</b> i <b>CQRS</b> w celu poprawy wydajności oraz zarządzania danymi.',
-      'Wdrożenie automatycznych testów jednostkowych oraz integracyjnych.'
+      'Migrowanie aplikacji na nową architekturę',
+      'Konsultowanie rozwiązań technicznych z zespołem na podstawie wymagań.',
     ],
-    skills: ["PHP", 'Symfony', 'Docker', 'Jenkins', 'DDD', 'CQRS', 'Scrum']
+    skills: ["PHP", 'Symfony', 'Docker', 'Kubernetes', 'DDD', 'Scrum']
   },
-  {
-    jobPosition: 'Founder',
-    dateInterval: '2019 — 2023',
-    dateFrom: '2019',
-    dateTo: '2023',
-    isPartTime: true,
-    companyName: 'Fashionly',
-    companyLink: 'https://www.pkowalczyk.dev',
-    i8nCode: 'fashionly',
-    responsibilities: [
-      'Budowa aplikacji agregującej produkty afiliacyjne z branży odzieżowej.',
-    ],
-    skills: ["PHP", 'Symfony', 'JavaScript', 'Vue', 'Nuxt', 'Docker']
-  },
+  // {
+  //   jobPosition: 'Founder',
+  //   dateInterval: '2019 — 2023',
+  //   dateFrom: '2019',
+  //   dateTo: '2023',
+  //   isPartTime: true,
+  //   companyName: 'Fashionly',
+  //   companyLink: 'https://www.pkowalczyk.dev',
+  //   i8nCode: 'fashionly',
+  //   responsibilities: [
+  //     'Budowa aplikacji agregującej produkty afiliacyjne z branży odzieżowej.',
+  //   ],
+  //   skills: ["PHP", 'Symfony', 'JavaScript', 'Vue', 'Nuxt', 'Docker']
+  // },
   {
     jobPosition: 'Fullstack Developer',
-    dateInterval: '03.2018 — 2019',
+    dateInterval: '03.2018 — 2022',
     dateFrom: '03.2018',
     dateTo: '2019',
     companyName: 'Comperia',
@@ -125,10 +125,13 @@ const experiencePl = ref([
     ],
     i8nCode: 'firstComperia',
     responsibilities: [
-      'Rozwój i utrzymanie systemów finansowych oraz migracja do Google Cloud Platform.',
-      'Projektowanie architektury mikroserwisów oraz integracja API bankowych.'
+      'Migracja portalu Telepolis.pl ze starego autoreskiego systemu na <b>Symfony</b>',
+      'Stworzenie <b>chatobota</b> do kontaktu z klientami.',
+      'Współpraca techniczna i produktowa nad tworzeniem i rozwojem <b>ComperiaRaty.pl</b> oraz <b>Comfino.pl</b>.',
+      'Odpowiedzialność za <b>stabilność i optymalizację systemów,</b> zapewniając <b>wysoką wydajność oraz bezpieczeństwo.</b>',
+      'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
     ],
-    skills: ["PHP", 'Symfony', 'JavaScript', 'Vue', 'Nuxt', 'K8S', 'Docker', 'Google Cloud Platform', 'Microservices']
+    skills: ["PHP", 'Symfony', 'JavaScript', 'Nuxt', 'Kubernetes', 'Docker', 'Google Cloud Platform', 'Microservices']
   },
   {
     jobPosition: 'Fullstack Developer',
@@ -229,7 +232,7 @@ const experienceEn = ref([
       'Implementing <b>DDD</b> and <b>CQRS</b> to improve performance and data management.',
       'Introducing automated unit and integration tests.'
     ],
-    skills: ["PHP", 'Symfony', 'Docker', 'Jenkins', 'DDD', 'CQRS', 'Scrum']
+    skills: ["PHP", 'Symfony', 'Docker', 'Jenkins', 'DDD', 'Scrum']
   },
   {
     jobPosition: 'Founder',

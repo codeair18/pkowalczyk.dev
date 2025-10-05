@@ -4,7 +4,7 @@ export default defineI18nConfig(() => ({
     messages: {
         pl: {
             aboutMe: 'Pomagam w tworzeniu rozwiązań skrojonych na miarę biznesu oraz optymalizuje procesy ich wdrażania.',
-            aboutMeExtended: 'Od dziecka zafascynowany komputerami oraz dynamicznie rozwijającą się technologią. W 2016 roku po uzyskaniu dyplomu inżyniera w zakresie geodezji, postanowiłem zmienić branżę. Wwiercając się w szeroko pojęty świat IT, miałem przyjemność budowania oprogramowania dla dużych korporacji, start-up\'ów oraz softwarehouse\'ów',
+            aboutMeExtended: 'Dysponuję ponad 10-letnim doświadczeniem w tworzeniu oprogramowania oraz nadprzeciętnych umiejętnościach rozwiązywania złożonych problemów technicznych. Specjalizuję się we wdrażaniu automatyzacji procesów biznesowych, co pozwala organizacjom na znaczne zwiększenie efektywności operacyjnej. W codziennej pracy wspomagam się nowoczesymi narzędziami takimi jak Claude Code oraz innych asystentów AI, co pozwala mi dostarczać rozwiązania najwyższej jakości w krótszym czasie.',
             techDescription: 'Uwielbiam pracę zespołową, wymianę spostrzeżeń oraz rozwiązywanie skomplikowanych problemów. W procesie wytwarzania kodu wykorzystuję najlepsze praktyki w celu zapewniania stabilności, skalowalności oraz łatwego dostępu do funkcjonalności aplikacji',
             freeTime: 'Gdy nie jestem przy komputerze, zazwyczaj spędzam czas aktywnie poza domem, gotuję włoskie dania lub spaceruję z <a href="https://www.instagram.com/pies_hermes" target="_blank">Hermesem.</a>',
             konsultExpert: 'Rozwijanie platformy medycznej umożliwiającej konsultację on-line. Tworzenie nowych funkcjonalności zarówno po stronie backendowej jak i frontendowej.',
@@ -48,7 +48,7 @@ export default defineI18nConfig(() => ({
         },
         en: {
             aboutMe: 'I help create tailor-made solutions for the business and optimise the implementation processes.',
-            aboutMeExtended: 'Fascinated by computers and rapidly developing technology since childhood. In 2016, after earning my engineering degree in geodesy, I decided to change my field. Drilling into the broad world of IT, I had the pleasure of developing software for large corporations, startups, and software houses.',
+            aboutMeExtended: 'With over 10 years of software development experience and exceptional problem-solving skills, I specialize in implementing business process automation that enables organizations to significantly increase operational efficiency. In my daily work, I leverage modern tools such as Claude Code and other AI assistants, allowing me to deliver highest quality solutions in shorter timeframes.',
             techDescription: 'I love teamwork, exchanging insights, and solving complex problems. In the coding process, I use best practices to ensure the stability, scalability, and easy access to the application’s functionalities.',
             freeTime: 'When I\'m not at the computer, I usually spend time actively outdoors, cooking Italian dishes, or taking walks with <a href="https://www.instagram.com/pies_hermes" target="_blank">Hermes.</a>',
             konsultExpert: 'Developing a medical platform that enables online consultation. Creating new functionalities on both backend and frontend side.',

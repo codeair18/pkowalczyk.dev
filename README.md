@@ -1,79 +1,79 @@
-# Personal Brand Website
+# Strona Personal Brand
 
-A modern personal portfolio and CV website built with Nuxt 3, showcasing professional experience, skills, and projects with multilingual support and responsive design.
+Nowoczesna strona portfolio i CV zbudowana w Nuxt 3, prezentująca doświadczenie zawodowe, umiejętności i projekty z obsługą wielu języków i responsywnym designem.
 
-## Features
+## Funkcje
 
-- **Multilingual Support** - Polish and English localization
-- **Dark/Light Mode** - Theme switcher with custom CSS variables
-- **Responsive Design** - Mobile-first approach with interactive elements
-- **Portfolio & CV Pages** - Dedicated layouts for different content types
-- **HTTPS Development** - Secure local development environment
+- **Wsparcie wielu języków** - Lokalizacja polska i angielska
+- **Tryb ciemny/jasny** - Przełącznik motywu z niestandardowymi zmiennymi CSS
+- **Responsywny design** - Podejście mobile-first z interaktywnymi elementami
+- **Strony Portfolio i CV** - Dedykowane layouty dla różnych typów treści
+- **Rozwój z HTTPS** - Bezpieczne środowisko deweloperskie
 
-## Technology Stack
+## Stack technologiczny
 
-- **Nuxt 3** - Vue.js framework with SSR/SSG support
-- **Vue 3** - Frontend framework with Composition API
-- **TypeScript** - Type-safe JavaScript
-- **Nuxt UI** - Component library with Tailwind CSS
-- **Sass** - CSS preprocessor
-- **VueUse** - Composition utilities
+- **Nuxt 3** - Framework Vue.js z obsługą SSR/SSG
+- **Vue 3** - Framework frontend z Composition API
+- **TypeScript** - Typowany JavaScript
+- **Nuxt UI** - Biblioteka komponentów z Tailwind CSS
+- **Sass** - Preprocesor CSS
+- **VueUse** - Narzędzia Composition API
 
-## Getting Started
+## Rozpoczęcie pracy
 
-### Prerequisites
+### Wymagania
 
-- Node.js (latest LTS version recommended)
+- Node.js (zalecana najnowsza wersja LTS)
 - npm
 
-### Installation
+### Instalacja
 
 ```bash
 npm install
 ```
 
-### Development Server
+### Serwer deweloperski
 
-Start the development server with HTTPS on port 3001:
+Uruchom serwer deweloperski z HTTPS na porcie 3001:
 
 ```bash
 npm run dev
 ```
 
-The site will be available at `https://localhost:3001`
+Strona będzie dostępna pod adresem `https://localhost:3001`
 
-### Build Commands
+### Komendy budowania
 
 ```bash
-npm run build      # Build for production
-npm run generate   # Generate static site
-npm run preview    # Preview production build
+npm run build      # Zbuduj dla produkcji
+npm run generate   # Wygeneruj statyczną stronę
+npm run preview    # Podgląd wersji produkcyjnej
 ```
 
-## Project Structure
+## Struktura projektu
 
 ```
 ├── components/
-│   └── switcher/           # Theme switcher components
+│   └── switcher/           # Komponenty przełącznika motywu
 ├── pages/
-│   ├── index.vue          # Main portfolio page
-│   └── cv.vue             # CV/resume page
+│   ├── index.vue          # Główna strona portfolio
+│   └── cv.vue             # Strona CV/resume
 ├── public/
-│   └── static/            # Static assets
-├── server/                # Server-side code
-├── app.vue               # Root component
-├── nuxt.config.ts        # Nuxt configuration
-├── app.config.ts         # App configuration
-├── i18n.config.ts        # Internationalization config
-└── CLAUDE.md             # Development guidelines
+│   └── static/            # Zasoby statyczne
+├── server/                # Kod serwerowy
+├── app.vue               # Główny komponent
+├── nuxt.config.ts        # Konfiguracja Nuxt
+├── app.config.ts         # Konfiguracja aplikacji
+├── i18n.config.ts        # Konfiguracja internacjonalizacji
+└── CLAUDE.md             # Wytyczne deweloperskie
 ```
 
-## Development
+## Rozwój
 
-The project uses:
-- Self-signed SSL certificates for HTTPS development
-- Custom CSS variables for theming
-- Reactive data structures for experience and skills
-- Auto-imported components
+Projekt wykorzystuje:
+- Certyfikaty SSL z podpisem własnym dla rozwoju HTTPS
+- Niestandardowe zmienne CSS dla motywów
+- Reaktywne struktury danych dla doświadczenia i umiejętności
+- Automatycznie importowane komponenty
 
-For detailed development guidelines, see [CLAUDE.md](./CLAUDE.md).
+Szczegółowe wytyczne deweloperskie znajdziesz w [CLAUDE.md](./CLAUDE.md).
