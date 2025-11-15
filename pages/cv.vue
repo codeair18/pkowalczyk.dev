@@ -18,13 +18,16 @@ const experiencePl = ref([
     ],
     responsibilities: [
       'Współpraca z interesariuszami w celu <b>analizy wymagań biznesowych i ich implementacji w architekturze systemu.</b>',
+      'Implementacja automatyzacji usprawniającą pracę zespołu developerskiego w tym procesów CI/CD oraz monitoringu aplikacji.',
       'Mentoring i wsparcie dla zespołu programistycznego, wprowadzanie <b>dobrych praktyk kodowania oraz DevOps.</b>',
       'Odpowiedzialność za <b>stabilność i optymalizację systemów,</b> zapewniając <b>wysoką wydajność oraz bezpieczeństwo.</b>',
       'Tworzenie i rozwój <b>mikroserwisowej architektury</b> w środowisku <b>Docker/Kubernetes</b> na <b>Google Cloud Platform.</b>',
       'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
+      'Przeprowadzanie code review oraz dbanie o jakość kodu w zespole.',
+      'Kierowanie procesem wdrażania nowych funkcjonalności, od fazy planowania po produkcję.'
     ],
     i8nCode: 'comperiaPay',
-    skills: ['PHP', 'Symfony', 'JavaScript', 'Nuxt', 'Docker', 'Kubernetes', 'Google Cloud Platform']
+    skills: ['PHP', 'Symfony', 'JavaScript', 'Nuxt', 'Docker', 'Kubernetes', 'Google Cloud Platform', 'RabbitMQ']
   },
   // {
   //   jobPosition: 'Founder',
@@ -125,13 +128,13 @@ const experiencePl = ref([
     ],
     i8nCode: 'firstComperia',
     responsibilities: [
-      'Migracja portalu Telepolis.pl ze starego autoreskiego systemu na <b>Symfony</b>',
-      'Stworzenie <b>chatobota</b> do kontaktu z klientami.',
+      'Migracja portalu Telepolis.pl ze starego autorskiego systemu na <b>Symfony</b>',
+      'Implementacja <b>chatobota</b> wspierającego zespół obsługi klienta.',
       'Współpraca techniczna i produktowa nad tworzeniem i rozwojem <b>ComperiaRaty.pl</b> oraz <b>Comfino.pl</b>.',
       'Odpowiedzialność za <b>stabilność i optymalizację systemów,</b> zapewniając <b>wysoką wydajność oraz bezpieczeństwo.</b>',
       'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
     ],
-    skills: ["PHP", 'Symfony', 'JavaScript', 'Nuxt', 'Kubernetes', 'Docker', 'Google Cloud Platform', 'Microservices']
+    skills: ["PHP", 'Symfony', 'JavaScript', 'Node.js', 'Nuxt', 'Kubernetes', 'Docker', 'Google Cloud Platform', 'RabbitMQ']
   },
   {
     jobPosition: 'Fullstack Developer',
@@ -142,9 +145,11 @@ const experiencePl = ref([
     i8nCode: 'konsultExpert',
     responsibilities: [
       'Rozwijanie platformy medycznej do konsultacji online.',
-      'Tworzenie nowych funkcjonalności backendowych i frontendowych.',
+      'Aktywna współpraca z grafikiem w celu dostarczenia responsywnego i przyjaznego interfejsu użytkownika.',
+      'Integracja z systemem płatności online <b>Przelewy24</b>.',
+      'Implementacja interfejsu razem z logiką do wideorozmów z <b>Twilio</b>, chatu oraz systemu wymiany plików.',
     ],
-    skills: ["PHP", 'Symfony', 'JavaScript']
+    skills: ["PHP", 'Symfony', 'JavaScript', 'Twig', 'jQuery']
   }
 ])
 
