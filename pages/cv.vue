@@ -145,7 +145,7 @@ const experiencePl = ref([
     i8nCode: 'konsultExpert',
     responsibilities: [
       'Rozwijanie platformy medycznej do konsultacji online.',
-      'Aktywna współpraca z grafikiem w celu dostarczenia responsywnego i przyjaznego interfejsu użytkownika.',
+      'Aktywna <b>współpraca z grafikiem</b> w celu dostarczenia responsywnego i przyjaznego interfejsu użytkownika.',
       'Integracja z systemem płatności online <b>Przelewy24</b>.',
       'Implementacja interfejsu razem z logiką do wideorozmów z <b>Twilio</b>, chatu oraz systemu wymiany plików.',
     ],
