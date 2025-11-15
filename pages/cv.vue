@@ -72,7 +72,7 @@ const experiencePl = ref([
   //   skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js']
   // },
   {
-    jobPosition: 'PhP Developer',
+    jobPosition: 'PHP Developer',
     dateInterval: '2022 — 06.2023',
     dateFrom: '2022',
     dateTo: '06.2023',
