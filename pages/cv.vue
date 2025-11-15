@@ -27,7 +27,7 @@ const experiencePl = ref([
       'Kierowanie procesem <b>wdrażania</b> nowych funkcjonalności, od fazy planowania po produkcję.'
     ],
     i8nCode: 'comperiaPay',
-    skills: ['PHP', 'Symfony', 'JavaScript', 'Nuxt', 'Docker', 'Kubernetes', 'Google Cloud Platform', 'RabbitMQ']
+    skills: ['PHP', 'Symfony', 'JavaScript', 'Nuxt', 'Vue', 'Docker', 'Kubernetes', 'Google Cloud Platform', 'RabbitMQ']
   },
   // {
   //   jobPosition: 'Founder',
@@ -134,7 +134,7 @@ const experiencePl = ref([
       'Odpowiedzialność za <b>stabilność i optymalizację systemów,</b> zapewniając <b>wysoką wydajność oraz bezpieczeństwo.</b>',
       'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
     ],
-    skills: ["PHP", 'Symfony', 'JavaScript', 'Node.js', 'Nuxt', 'Kubernetes', 'Docker', 'Google Cloud Platform', 'RabbitMQ']
+    skills: ["PHP", 'Symfony', 'JavaScript', 'Node.js', 'Nuxt', 'Vue', 'Kubernetes', 'Docker', 'Google Cloud Platform', 'RabbitMQ']
   },
   {
     jobPosition: 'Fullstack Developer',
