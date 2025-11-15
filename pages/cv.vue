@@ -18,13 +18,13 @@ const experiencePl = ref([
     ],
     responsibilities: [
       'Współpraca z interesariuszami w celu <b>analizy wymagań biznesowych i ich implementacji w architekturze systemu.</b>',
-      'Implementacja automatyzacji usprawniającą pracę zespołu developerskiego w tym procesów CI/CD oraz monitoringu aplikacji.',
+      'Implementacja automatyzacji usprawniającą pracę zespołu developerskiego w tym procesów <b>CI/CD</b> oraz monitoringu aplikacji.',
       'Mentoring i wsparcie dla zespołu programistycznego, wprowadzanie <b>dobrych praktyk kodowania oraz DevOps.</b>',
       'Odpowiedzialność za <b>stabilność i optymalizację systemów,</b> zapewniając <b>wysoką wydajność oraz bezpieczeństwo.</b>',
       'Tworzenie i rozwój <b>mikroserwisowej architektury</b> w środowisku <b>Docker/Kubernetes</b> na <b>Google Cloud Platform.</b>',
       'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
-      'Przeprowadzanie code review oraz dbanie o jakość kodu w zespole.',
-      'Kierowanie procesem wdrażania nowych funkcjonalności, od fazy planowania po produkcję.'
+      'Przeprowadzanie <b>code review</b> oraz dbanie o jakość kodu w zespole.',
+      'Kierowanie procesem <b>wdrażania</b> nowych funkcjonalności, od fazy planowania po produkcję.'
     ],
     i8nCode: 'comperiaPay',
     skills: ['PHP', 'Symfony', 'JavaScript', 'Nuxt', 'Docker', 'Kubernetes', 'Google Cloud Platform', 'RabbitMQ']
