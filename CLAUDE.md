@@ -4,125 +4,51 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal brand website built with Nuxt 3, featuring a portfolio/CV layout. The site showcases professional experience, skills, and projects with multilingual support (Polish/English) and dark/light mode theming.
+Personal brand / portfolio + CV site built with Nuxt 3, Nuxt UI Pro, and `@nuxtjs/i18n` (Polish default, English secondary). The site has a portfolio landing page, a structured CV page, a contact page, and an experimental "tree" page.
 
-## Development Commands
+## Commands
 
-### Development Server
 ```bash
-npm run dev
-```
-Note: Development server runs with HTTPS using self-signed certificates (localhost.crt/localhost.key) on port 3001.
-
-### Build Commands
-```bash
-npm run build      # Build for production
-npm run generate   # Generate static site
+npm install        # Install dependencies (postinstall runs `nuxt prepare`)
+npm run dev        # Dev server, HTTPS on https://localhost:3001
+npm run build      # Production build
+npm run generate   # Static site generation
 npm run preview    # Preview production build
 ```
 
-### Dependency Management
-```bash
-npm install        # Install dependencies
-npm run postinstall # Nuxt preparation (runs automatically after install)
-```
+There is no test, lint, or typecheck script wired up — `tsconfig.json` just extends Nuxt's generated config.
 
-## Architecture & Technology Stack
+### HTTPS in dev
+`npm run dev` is hard-wired to HTTPS using the committed self-signed cert pair `localhost.crt` / `localhost.key` and runs with `NODE_TLS_REJECT_UNAUTHORIZED=0`. The Nuxt dev port (`devServer.port`) is **3001**, not the default 3000.
 
-### Core Framework
-- **Nuxt 3** - Vue.js framework with SSR/SSG support
-- **Vue 3** - Frontend framework with Composition API
-- **TypeScript** - Type-safe JavaScript (configured via tsconfig.json)
+## Architecture
 
-### UI & Styling
-- **Nuxt UI** - Component library (@nuxt/ui)
-- **Nuxt UI Pro** - Premium component library (@nuxt/ui-pro)
-- **Sass** - CSS preprocessor
-- **Tailwind CSS** - Utility-first CSS framework (via Nuxt UI)
+### Stack
+- Nuxt 3 (extends `@nuxt/ui-pro`) with modules `@nuxt/ui`, `@vueuse/nuxt`, `@nuxtjs/i18n`.
+- Components auto-imported from `~/components`.
+- Sass available for SCSS in components.
+- UI theme set in `app.config.ts` — primary `lime`, gray `neutral`.
 
-### Key Features
-- **Internationalization** - @nuxtjs/i18n module with Polish/English support
-- **Dark/Light Mode** - Theme switcher with custom CSS variables
-- **VueUse** - Composition utilities (@vueuse/core, @vueuse/nuxt)
-- **Responsive Design** - Mobile-first approach with radial gradient mouse tracking
+### Pages
+- `pages/index.vue` — main portfolio landing (hero, experience timeline, skills, social links).
+- `pages/cv.vue` — printable CV layout.
+- `pages/contact.vue` — contact page.
+- `pages/tree.vue` — link-tree style page.
 
-## Project Structure
+`app.vue` is just `<NuxtPage/>` — no shared layout wrapper; per-page styling is self-contained.
 
-```
-├── components/
-│   └── switcher/           # Theme switcher components
-│       ├── DayNight.vue
-│       └── DayNight2.vue
-├── pages/
-│   ├── index.vue          # Main portfolio page
-│   └── cv.vue             # CV/resume page
-├── public/
-│   └── static/            # Static assets
-├── server/                # Server-side code
-├── app.vue               # Root component
-├── nuxt.config.ts        # Nuxt configuration
-├── app.config.ts         # App configuration (UI theme)
-├── i18n.config.ts        # Internationalization config
-└── tsconfig.json         # TypeScript configuration
-```
+### Data model: experience drives skills
+Experience entries are **defined inline in the page components**, not loaded from a shared store or content collection. The list of skills displayed is **derived** from the experience entries (aggregated/deduped at runtime into a `skills` ref), so to surface a new skill chip you add it to an experience entry's stack rather than editing a skills array directly.
 
-## Configuration Details
-
-### Nuxt Configuration
-- Extends @nuxt/ui-pro
-- Modules: @nuxt/ui, @vueuse/nuxt, @nuxtjs/i18n
-- Auto-imports components from ~/components
-- DevTools enabled for development
-
-### UI Theme Configuration
-- Primary color: lime
-- Gray color: neutral
-- Custom CSS variables for light/dark themes
+`pages/cv.vue` stores experience as **two parallel locale-specific arrays** (`experiencePl` and `experienceEn`) that are merged by a `computed` `experience` based on the current i18n locale. When editing CV experience, update **both** arrays in lockstep — adding to one without the other will desync the locales. `pages/index.vue` instead uses a single `experience` ref and relies on `$t()` keys from `i18n.config.ts` for translatable strings.
 
 ### Internationalization
-- Default locale: Polish (pl)
-- Supported locales: Polish (pl), English (en)
-- Legacy mode disabled (uses Vue I18n v9+)
+- `i18n.config.ts` holds all `pl`/`en` messages in one file. Default locale is `pl`, legacy mode off (Vue I18n v9+ composition API).
+- Index page text flows through `$t()` keys; CV page uses the dual-array approach above. Be aware of which model a page uses before adding copy.
 
-## Development Notes
+### Theme switching
+`components/switcher/` has two day/night toggle variants (`DayNight.vue`, `DayNight2.vue`). Theming uses **custom CSS variables defined per-page in `<style>` blocks**, not Nuxt UI's color-mode classes alone — when adjusting colors, change the CSS variables in the page that owns them rather than expecting a global theme file.
 
-### Page Structure
-- `pages/index.vue` - Main portfolio page with experience timeline, skills, and social links
-- `pages/cv.vue` - Dedicated CV page with structured resume format
-- Both pages share similar data structures but with different layouts
-
-### Data Management
-- Experience data defined in-component with reactive refs
-- Skills automatically aggregated from experience entries
-- Bilingual content with i18n integration
-
-### Styling Approach
-- Custom CSS variables for theme switching
-- Responsive design with mobile-first approach
-- Mouse tracking radial gradient effect on desktop
-- SCSS for advanced styling features
-
-### SSL Development
-The development server uses HTTPS with self-signed certificates for local development. The certificates (localhost.crt, localhost.key) are already configured in the npm dev script.
-
-## Common Tasks
-
-When working with this codebase:
-1. **Adding new experience entries** - Update the experience array in the relevant page component
-2. **Modifying themes** - Update CSS variables in the style sections
-3. **Internationalization** - Add new translations to i18n.config.ts
-4. **Component development** - Place new components in appropriate subdirectories under /components
-5. **Styling changes** - Use existing CSS variable system for consistency
-
-## Important Files to Understand
-
-- `pages/index.vue:238-396` - Main experience data structure
-- `pages/cv.vue:7-314` - CV page experience data
-- `i18n.config.ts:4-42` - All translatable content
-- `nuxt.config.ts` - Core framework configuration
-- `app.config.ts` - UI theme settings
-# important-instruction-reminders
-Do what has been asked; nothing more, nothing less.
-NEVER create files unless they're absolutely necessary for achieving your goal.
-ALWAYS prefer editing an existing file to creating a new one.
-NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
+## Notable repo hygiene
+- `app_copy.vue` and `test.html` at the repo root are untracked scratch files — ignore them; they aren't part of the build.
+- `.env` exists locally; treat as secret and don't commit values from it.
