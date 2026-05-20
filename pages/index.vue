@@ -115,9 +115,9 @@
           </li>
         </ul>
 
-<a href="https://credsverse.com/credentials/558a3b9e-a1ab-426e-a4c3-e3e2dcc5ffa7">
-  <img src="https://cdn.certifier.io/4c153b4f-2eb6-4771-91a2-9ce4efa9c13f/credentials/01krxf5mrvmetychjer80ne81j/designs/01kp2wbtdvp88q3m0kx2t59rvz/1KhcN76cy8.png" />
-</a>
+<!--<a href="https://credsverse.com/credentials/558a3b9e-a1ab-426e-a4c3-e3e2dcc5ffa7">-->
+<!--  <img src="https://cdn.certifier.io/4c153b4f-2eb6-4771-91a2-9ce4efa9c13f/credentials/01krxf5mrvmetychjer80ne81j/designs/01kp2wbtdvp88q3m0kx2t59rvz/1KhcN76cy8.png" />-->
+<!--</a>-->
       </header>
       <main class="lg:overflow-y-auto lg:h-screen hidden-scroll pt-6 lg:w-1/2 lg:py-24">
         <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
