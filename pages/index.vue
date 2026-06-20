@@ -28,10 +28,10 @@
         <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
           <a href="/">Przemek Kowalczyk</a>
         </h1>
-        <h2 class="mt-3 text-lg font-medium tracking-tight text-gray-400 sm:text-xl">
-          Developer
+        <h2 class="mt-3 text-lg font-medium tracking-tight sm:text-xl">
+          {{ $t('tagline') }}
         </h2>
-        <p class="mt-4 max-w-md">{{ $t('aboutMe') }}</p>
+<!--        <p class="mt-4 max-w-md">{{ $t('aboutMe') }}</p>-->
       </div>
       <ul class="experience__tech my-5 lg:mt-2 flex flex-wrap">
         <li
@@ -105,15 +105,13 @@
           </a>
         </li>
         <li class="mr-5 text-xs shrink-0 cursor-pointer">
-          <a
-            href="https://credsverse.com/credentials/558a3b9e-a1ab-426e-a4c3-e3e2dcc5ffa7"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label="Certification (opens in a new tab)"
-            title="Certification">
-            <span class="sr-only">Certification</span>
+          <NuxtLink
+            to="/certifications"
+            aria-label="Certifications"
+            title="Certifications">
+            <span class="sr-only">Certifications</span>
             <UIcon name="i-ph-certificate" class="h-6 w-6 opacity-80 hover:opacity-100 transition-opacity"/>
-          </a>
+          </NuxtLink>
         </li>
         <li class="mr-5 text-xs shrink-0 cursor-pointer">
           <a
@@ -164,9 +162,10 @@ const contactMe = () => {
 }
 
 const skills = ref([
-  'PHP', 'Symfony', 'Vue', 'Nuxt', 'Docker', 'Node.js', 'Kubernetes',
-  'Google Cloud Platform', 'JavaScript', 'TypeScript', 'Jenkins',
-  'DDD', 'CQRS', 'Scrum', 'Microservices',
+  'AI Agents', 'LLM Integration', 'Process Automation', 'CRM Systems',
+  'SaaS Platforms', 'Cloud Architecture', 'Microservices', 'CI/CD', 'Workflows',
+  'Symfony', 'Nuxt', 'Node.js', 'Docker', 'Kubernetes',
+  'Google Cloud Platform', 'TypeScript', 'DDD',
 ])
 </script>
 

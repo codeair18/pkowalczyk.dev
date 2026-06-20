@@ -3,6 +3,7 @@ export default defineI18nConfig(() => ({
     locale: 'pl',
     messages: {
         pl: {
+            tagline: 'Zamieniam złożone wyzwania w skalowalne rozwiązania, które napędzają biznes.',
             aboutMe: 'Pomagam w tworzeniu rozwiązań skrojonych na miarę biznesu oraz optymalizuje procesy ich wdrażania.',
             aboutMeExtended: 'Dysponuję ponad 10-letnim doświadczeniem w tworzeniu oprogramowania oraz nadprzeciętnych umiejętnościach rozwiązywania złożonych problemów technicznych. Specjalizuję się we wdrażaniu automatyzacji procesów biznesowych, co pozwala organizacjom na znaczne zwiększenie efektywności operacyjnej. W codziennej pracy wspomagam się nowoczesymi narzędziami takimi jak Claude Code oraz innych asystentów AI, co pozwala mi dostarczać rozwiązania najwyższej jakości w krótszym czasie.',
             techDescription: 'Uwielbiam pracę zespołową, wymianę spostrzeżeń oraz rozwiązywanie skomplikowanych problemów. W procesie wytwarzania kodu wykorzystuję najlepsze praktyki w celu zapewniania stabilności, skalowalności oraz łatwego dostępu do funkcjonalności aplikacji',
@@ -23,6 +24,9 @@ export default defineI18nConfig(() => ({
             education: 'Wykształcenie',
             email: 'Email',
             phone: 'Telefon',
+            certifications: 'Certyfikaty',
+            certificationsSubtitle: 'Zdobyte certyfikaty oraz potwierdzone kompetencje.',
+            backHome: 'Powrót',
             // Experience responsibilities
             comperiaPayResp1: 'Współpraca z interesariuszami w celu <b>analizy wymagań biznesowych i ich implementacji w architekturze systemu.</b>',
             comperiaPayResp2: 'Mentoring i wsparcie dla zespołu programistycznego, wprowadzanie <b>dobrych praktyk kodowania oraz DevOps.</b>',
@@ -47,6 +51,7 @@ export default defineI18nConfig(() => ({
             konsultExpertResp2: 'Tworzenie nowych funkcjonalności backendowych i frontendowych.',
         },
         en: {
+            tagline: 'I turn complex challenges into scalable solutions that move business forward.',
             aboutMe: 'I help create tailor-made solutions for the business and optimise the implementation processes.',
             aboutMeExtended: 'With over 10 years of software development experience and exceptional problem-solving skills, I specialize in implementing business process automation that enables organizations to significantly increase operational efficiency. In my daily work, I leverage modern tools such as Claude Code and other AI assistants, allowing me to deliver highest quality solutions in shorter timeframes.',
             techDescription: 'I love teamwork, exchanging insights, and solving complex problems. In the coding process, I use best practices to ensure the stability, scalability, and easy access to the application’s functionalities.',
@@ -68,6 +73,9 @@ export default defineI18nConfig(() => ({
             education: 'Education',
             email: 'Email',
             phone: 'Phone',
+            certifications: 'Certifications',
+            certificationsSubtitle: 'Earned certifications and verified competencies.',
+            backHome: 'Back',
             // Experience responsibilities
             comperiaPayResp1: 'Collaborating with stakeholders to <b>analyze business requirements and implement them within the system architecture.</b>',
             comperiaPayResp2: 'Mentoring and supporting the development team, introducing <b>best coding and DevOps practices.</b>',
