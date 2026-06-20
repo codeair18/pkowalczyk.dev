@@ -1,13 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
   devtools: { enabled: true },
 
   modules: [
-      "@nuxt/ui",
+    '@nuxt/ui',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
   ],
+
+  css: ['~/assets/css/main.css'],
+
+  i18n: {
+    strategy: 'no_prefix',
+    defaultLocale: 'pl',
+    locales: ['pl', 'en'],
+  },
 
   components: [
     '~/components'
@@ -17,5 +24,5 @@ export default defineNuxtConfig({
     port: 3001
   },
 
-  compatibilityDate: '2024-08-18',
+  compatibilityDate: '2025-06-21',
 })

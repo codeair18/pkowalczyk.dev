@@ -155,7 +155,7 @@
                 <UTooltip
                   v-if="exp.isPartTime"
                   text="Part time"
-                  :popper="{ placement: 'top'}"
+                  :content="{ side: 'top' }"
                 >
                   <UIcon name="mdi:clock-time-five-outline"/>
                 </UTooltip>
