@@ -50,5 +50,4 @@ Experience entries are **defined inline in the page components**, not loaded fro
 `components/switcher/` has two day/night toggle variants (`DayNight.vue`, `DayNight2.vue`). Theming uses **custom CSS variables defined per-page in `<style>` blocks**, not Nuxt UI's color-mode classes alone — when adjusting colors, change the CSS variables in the page that owns them rather than expecting a global theme file.
 
 ## Notable repo hygiene
-- `app_copy.vue` and `test.html` at the repo root are untracked scratch files — ignore them; they aren't part of the build.
 - `.env` exists locally; treat as secret and don't commit values from it.
