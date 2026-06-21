@@ -192,7 +192,7 @@ useHead({
     {property: 'og:url', content: 'https://pkowalczyk.dev'},
     {property: 'og:type', content: 'website'}
   ],
-  title: 'Przemek Kowalczyk - Developer',
+  title: 'Przemek Kowalczyk — Full-Stack Developer & Software Consultant',
 
 })
 
