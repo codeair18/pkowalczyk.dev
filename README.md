@@ -32,6 +32,21 @@ Nowoczesna strona portfolio i CV zbudowana w Nuxt 3, prezentująca doświadczeni
 npm install
 ```
 
+### Zmienne środowiskowe
+
+Czat asystenta AI na stronie głównej korzysta z OpenRouter. Skopiuj `.env.example` do `.env` i uzupełnij klucz:
+
+```bash
+cp .env.example .env
+```
+
+| Zmienna | Wymagana | Opis |
+| --- | --- | --- |
+| `NUXT_OPENROUTER_API_KEY` | tak | Klucz API z [openrouter.ai/keys](https://openrouter.ai/keys) |
+| `NUXT_OPENROUTER_MODEL` | nie | Nadpisanie modelu (domyślnie `anthropic/claude-3.5-haiku`) |
+
+Bez klucza czat wyświetli komunikat o tymczasowej niedostępności asystenta.
+
 ### Serwer deweloperski
 
 Uruchom serwer deweloperski z HTTPS na porcie 3001:

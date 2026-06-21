@@ -134,7 +134,7 @@
           
           <a href="https://www.pkowalczyk.dev" target="_blank" rel="noreferrer noopener" class="link-card">
             <div class="flex items-center gap-3">
-              <UIcon name="i-ph-shirt" class="text-xl" />
+              <UIcon name="i-ph-t-shirt" class="text-xl" />
               <div>
                 <h3 class="font-medium">Fashionly</h3>
                 <p class="text-sm text-gray-400">Fashion Affiliate Platform</p>

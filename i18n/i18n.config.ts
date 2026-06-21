@@ -27,6 +27,15 @@ export default defineI18nConfig(() => ({
             certifications: 'Certyfikaty',
             certificationsSubtitle: 'Zdobyte certyfikaty oraz potwierdzone kompetencje.',
             backHome: 'Powrót',
+            // AI agent chat
+            chatHeading: 'Opowiedz mi o swoim projekcie',
+            chatOpen: 'Porozmawiaj z asystentem',
+            chatClose: 'Zwiń czat',
+            chatGreeting: 'Cześć! Jestem asystentem Przemka. Opowiedz mi, co chciałbyś zbudować, a przekażę szczegóły dalej. Czego potrzebujesz?',
+            chatPlaceholder: 'Napisz wiadomość…',
+            chatSend: 'Wyślij',
+            chatSubmitted: 'Wymagania wysłane ✓ Przemek wkrótce się odezwie.',
+            chatError: 'Przepraszam, coś poszło nie tak. Spróbuj ponownie.',
             // Experience responsibilities
             comperiaPayResp1: 'Współpraca z interesariuszami w celu <b>analizy wymagań biznesowych i ich implementacji w architekturze systemu.</b>',
             comperiaPayResp2: 'Mentoring i wsparcie dla zespołu programistycznego, wprowadzanie <b>dobrych praktyk kodowania oraz DevOps.</b>',
@@ -76,6 +85,15 @@ export default defineI18nConfig(() => ({
             certifications: 'Certifications',
             certificationsSubtitle: 'Earned certifications and verified competencies.',
             backHome: 'Back',
+            // AI agent chat
+            chatHeading: 'Tell me about your project',
+            chatOpen: 'Chat with the assistant',
+            chatClose: 'Collapse chat',
+            chatGreeting: "Hi! I'm Przemek's assistant. Tell me what you'd like to build and I'll pass the details along. What do you need?",
+            chatPlaceholder: 'Type a message…',
+            chatSend: 'Send',
+            chatSubmitted: "Requirements sent ✓ Przemek will get back to you soon.",
+            chatError: 'Sorry, something went wrong. Please try again.',
             // Experience responsibilities
             comperiaPayResp1: 'Collaborating with stakeholders to <b>analyze business requirements and implement them within the system architecture.</b>',
             comperiaPayResp2: 'Mentoring and supporting the development team, introducing <b>best coding and DevOps practices.</b>',
