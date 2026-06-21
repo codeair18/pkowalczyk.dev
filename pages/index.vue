@@ -123,6 +123,12 @@
         </li>
       </ul>
     </header>
+    <section class="mt-12 w-full">
+      <h2 class="text-lg font-medium mb-3">{{ $t('chatHeading') }}</h2>
+      <ClientOnly>
+        <AgentChat/>
+      </ClientOnly>
+    </section>
   </main>
 </template>
 

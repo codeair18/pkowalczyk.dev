@@ -10,6 +10,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    // Server-only secrets. Nitro maps NUXT_OPENROUTER_API_KEY -> openrouterApiKey.
+    openrouterApiKey: '',
+    openrouterModel: 'anthropic/claude-haiku-4.5',
+  },
+
   i18n: {
     strategy: 'no_prefix',
     defaultLocale: 'pl',
