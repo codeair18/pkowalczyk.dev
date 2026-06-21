@@ -29,6 +29,8 @@ export default defineI18nConfig(() => ({
             backHome: 'Powrót',
             // AI agent chat
             chatHeading: 'Opowiedz mi o swoim projekcie',
+            chatOpen: 'Porozmawiaj z asystentem',
+            chatClose: 'Zwiń czat',
             chatGreeting: 'Cześć! Jestem asystentem Przemka. Opowiedz mi, co chciałbyś zbudować, a przekażę szczegóły dalej. Czego potrzebujesz?',
             chatPlaceholder: 'Napisz wiadomość…',
             chatSend: 'Wyślij',
@@ -85,6 +87,8 @@ export default defineI18nConfig(() => ({
             backHome: 'Back',
             // AI agent chat
             chatHeading: 'Tell me about your project',
+            chatOpen: 'Chat with the assistant',
+            chatClose: 'Collapse chat',
             chatGreeting: "Hi! I'm Przemek's assistant. Tell me what you'd like to build and I'll pass the details along. What do you need?",
             chatPlaceholder: 'Type a message…',
             chatSend: 'Send',

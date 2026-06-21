@@ -1,14 +1,25 @@
 <template>
   <nav class="fixed h-auto w-screen z-50">
     <div class="flex md:justify-between p-5 items-center gap-2">
-      <div class="lang_switcher light:text-sk-700 text-xl">
-                <button
-                  v-if="locale === 'pl'"
-                  @click="setLocale('en')"
-                >
-                  EN
-                </button>
-                <button v-else @click="setLocale('pl')">PL</button>
+      <div class="lang_switcher" role="group" aria-label="Language">
+        <button
+          type="button"
+          class="lang_switcher__option"
+          :class="{ 'is-active': locale === 'pl' }"
+          :aria-pressed="locale === 'pl'"
+          @click="setLocale('pl')"
+        >
+          PL
+        </button>
+        <button
+          type="button"
+          class="lang_switcher__option"
+          :class="{ 'is-active': locale === 'en' }"
+          :aria-pressed="locale === 'en'"
+          @click="setLocale('en')"
+        >
+          EN
+        </button>
       </div>
     </div>
   </nav>
@@ -19,12 +30,21 @@
   <main class="mx-auto flex min-h-screen max-w-2xl flex-col px-6 py-16 font-sans md:px-12 md:py-24 lg:py-32">
     <header>
       <div>
-        <UAvatar
-          src="/android-chrome-512x512.png"
-          class="mb-5"
-          alt="Avatar"
-          size="3xl"
-        />
+        <button
+          type="button"
+          class="avatar-button relative mb-5 inline-block"
+          :aria-label="$t('chatOpen')"
+          @click="openChat"
+        >
+          <UAvatar
+            src="/android-chrome-512x512.png"
+            alt="Avatar"
+            size="3xl"
+          />
+          <Transition name="badge-pop">
+            <span v-if="showChatBadge && !chatOpen" class="chat-badge" aria-hidden="true">+1</span>
+          </Transition>
+        </button>
         <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
           <a href="/">Przemek Kowalczyk</a>
         </h1>
@@ -124,10 +144,34 @@
       </ul>
     </header>
     <section class="mt-12 w-full">
-      <h2 class="text-lg font-medium mb-3">{{ $t('chatHeading') }}</h2>
-      <ClientOnly>
-        <AgentChat/>
-      </ClientOnly>
+      <button
+        type="button"
+        class="chat-toggle inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium"
+        :aria-expanded="chatOpen"
+        aria-controls="agent-chat-panel"
+        @click="chatOpen = !chatOpen"
+      >
+        <UIcon
+          name="i-ph-chat-circle-dots"
+          class="h-5 w-5 transition-transform duration-300"
+          :class="chatOpen ? 'rotate-12' : ''"
+        />
+        <span>{{ chatOpen ? $t('chatClose') : $t('chatOpen') }}</span>
+        <UIcon
+          name="i-ph-caret-down"
+          class="h-4 w-4 transition-transform duration-300"
+          :class="chatOpen ? 'rotate-180' : ''"
+        />
+      </button>
+
+      <Transition name="chat-reveal">
+        <div v-show="chatOpen" id="agent-chat-panel" class="chat-panel mt-4">
+          <h2 class="text-lg font-medium mb-3">{{ $t('chatHeading') }}</h2>
+          <ClientOnly>
+            <AgentChat/>
+          </ClientOnly>
+        </div>
+      </Transition>
     </section>
   </main>
 </template>
@@ -162,6 +206,29 @@ const horizontalPixels = computed(() => {
 const verticalPixels = computed(() => {
   return y.value + 'px'
 })
+
+const chatOpen = ref(false)
+const showChatBadge = ref(false)
+
+let badgeTimer: ReturnType<typeof setTimeout> | undefined
+
+onMounted(() => {
+  badgeTimer = setTimeout(() => {
+    if (!chatOpen.value) showChatBadge.value = true
+  }, 3000)
+})
+
+onBeforeUnmount(() => {
+  if (badgeTimer) clearTimeout(badgeTimer)
+})
+
+const openChat = () => {
+  showChatBadge.value = false
+  chatOpen.value = true
+  nextTick(() => {
+    document.getElementById('agent-chat-panel')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+  })
+}
 
 const contactMe = () => {
   window.location.href = "mailto:kontakt@pkowalczyk.dev?subject=Kontakt&body=W%20czym%20mogę%20pomóc%3F";
@@ -289,7 +356,152 @@ nav {
 }
 
 .lang_switcher {
-  cursor: pointer;
   z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 9999px;
+  border: 1px solid currentColor;
+  opacity: 0.85;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.lang_switcher__option {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 0.35rem 0.7rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.55;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.is-active {
+    opacity: 1;
+    background-color: var(--ui-primary, #a3e635);
+    color: #1a1a1a;
+  }
+}
+
+/* Clickable avatar + "+1" message badge */
+.avatar-button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  line-height: 0;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.chat-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 1.4rem;
+  height: 1.4rem;
+  padding: 0 0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #ef4444;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  animation: badge-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+  }
+}
+
+/* Badge pop-in transition */
+.badge-pop-enter-active {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+}
+
+.badge-pop-leave-active {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.badge-pop-enter-from,
+.badge-pop-leave-to {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* Chat toggle button */
+.chat-toggle {
+  cursor: pointer;
+  color: var(--sun-link-color);
+  background-color: aliceblue;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.dark .chat-toggle {
+  color: #fffdf2;
+  background-color: #484848;
+
+  &:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Smooth reveal animation for the chat panel */
+.chat-panel {
+  will-change: opacity, transform, max-height;
+}
+
+.chat-reveal-enter-active,
+.chat-reveal-leave-active {
+  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.4s ease;
+  overflow: hidden;
+  max-height: 2000px;
+}
+
+.chat-reveal-enter-from,
+.chat-reveal-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
+  max-height: 0;
 }
 </style>
