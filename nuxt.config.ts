@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     // Server-only secrets. Nitro maps NUXT_OPENROUTER_API_KEY -> openrouterApiKey.
     openrouterApiKey: '',
     openrouterModel: 'anthropic/claude-haiku-4.5',
+    // Nitro maps NUXT_DISCORD_WEBHOOK_URL -> discordWebhookUrl. Empty = Discord send skipped.
+    discordWebhookUrl: '',
   },
 
   i18n: {

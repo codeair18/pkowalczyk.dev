@@ -24,6 +24,8 @@ There is no test, lint, or typecheck script wired up — `tsconfig.json` just ex
 ### Environment
 The AI chat needs OpenRouter credentials. Copy `.env.example` to `.env` and set `NUXT_OPENROUTER_API_KEY` (optional `NUXT_OPENROUTER_MODEL`, default `anthropic/claude-haiku-4.5`). Nitro maps these env vars onto `runtimeConfig.openrouterApiKey` / `openrouterModel`. Without a key the chat endpoint streams a bilingual "temporarily unavailable" message instead of erroring.
 
+Optional `NUXT_DISCORD_WEBHOOK_URL` (→ `runtimeConfig.discordWebhookUrl`) routes submitted leads to a Discord channel; when unset the lead sink only logs to the server console. All three are server-only secrets declared in `nuxt.config.ts` `runtimeConfig`.
+
 ## Architecture
 
 ### Stack
@@ -47,7 +49,7 @@ A streaming chat that interviews visitors and forwards their project requirement
 - `components/AgentChat.vue` — UI. POSTs the message history to `/api/chat` and reads a **newline-delimited JSON (NDJSON)** stream, appending `{type:"token"}` deltas into the live assistant bubble and flipping a "submitted" flag on `{type:"submitted"}`.
 - `server/api/chat.post.ts` — streaming OpenRouter proxy. Prepends the system prompt, runs a first completion with the `submit_requirements` tool enabled, and if the model calls it, forwards the args to `/api/lead`, emits `{type:"submitted"}`, then runs a **second completion (tools disabled)** so the model writes a natural confirmation. The exact NDJSON event types are documented at the top of that file.
 - `server/utils/agent.ts` — shared `SYSTEM_PROMPT` and the OpenAI-style `SUBMIT_TOOL` schema (`contact` + `description` required).
-- `server/api/lead.post.ts` — **mock** lead sink: logs the payload to the server console and returns `{ok,id}`. Swapping in a real channel (Slack/email/CRM) is a one-file change here.
+- `server/api/lead.post.ts` — lead sink: always logs the payload to the server console, and when `NUXT_DISCORD_WEBHOOK_URL` is set also POSTs a formatted Discord embed (lime-themed, fields mirror `SUBMIT_TOOL`). The Discord send is wrapped in try/catch and the handler always returns `{ok,id}`, so a delivery failure never breaks the chat stream. Adding another channel (Slack/email/CRM) is a one-file change here.
 
 ### Data model: experience drives skills (per page)
 There is no shared store or content collection — experience data is **defined inline in each page component**, and each page derives its own skills.
