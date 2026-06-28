@@ -34,6 +34,7 @@ export default defineI18nConfig(() => ({
             chatGreeting: 'Cześć! Jestem asystentem Przemka. Opowiedz mi, co chciałbyś zbudować, a przekażę szczegóły dalej. Czego potrzebujesz?',
             chatPlaceholder: 'Napisz wiadomość…',
             chatSend: 'Wyślij',
+            chatReset: 'Nowa rozmowa',
             chatSubmitted: 'Wymagania wysłane ✓ Przemek wkrótce się odezwie.',
             chatError: 'Przepraszam, coś poszło nie tak. Spróbuj ponownie.',
             // Experience responsibilities
@@ -92,6 +93,7 @@ export default defineI18nConfig(() => ({
             chatGreeting: "Hi! I'm Przemek's assistant. Tell me what you'd like to build and I'll pass the details along. What do you need?",
             chatPlaceholder: 'Type a message…',
             chatSend: 'Send',
+            chatReset: 'New conversation',
             chatSubmitted: "Requirements sent ✓ Przemek will get back to you soon.",
             chatError: 'Sorry, something went wrong. Please try again.',
             // Experience responsibilities

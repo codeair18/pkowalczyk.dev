@@ -6,11 +6,27 @@ interface Message {
 
 const { t } = useI18n()
 
-const messages = ref<Message[]>([{ role: 'assistant', content: t('chatGreeting') }])
+const STORAGE_KEY = 'agent-chat:v1'
+
+const messages = useLocalStorage<Message[]>(`${STORAGE_KEY}:messages`, [
+  { role: 'assistant', content: t('chatGreeting') },
+])
+const submitted = useLocalStorage<boolean>(`${STORAGE_KEY}:submitted`, false)
 const input = ref('')
 const loading = ref(false)
-const submitted = ref(false)
 const listEl = ref<HTMLElement | null>(null)
+
+// A reload mid-stream can persist an empty trailing assistant bubble; drop it.
+onMounted(() => {
+  const last = messages.value[messages.value.length - 1]
+  if (last && last.role === 'assistant' && !last.content) messages.value.pop()
+})
+
+const resetConversation = () => {
+  messages.value = [{ role: 'assistant', content: t('chatGreeting') }]
+  submitted.value = false
+  input.value = ''
+}
 
 const scrollToBottom = () => {
   nextTick(() => {
@@ -127,6 +143,15 @@ const onKeydown = (e: KeyboardEvent) => {
         :placeholder="$t('chatPlaceholder')"
         class="flex-1"
         @keydown="onKeydown"
+      />
+      <UButton
+        icon="i-ph-arrow-counter-clockwise"
+        variant="ghost"
+        color="neutral"
+        :disabled="loading"
+        :aria-label="$t('chatReset')"
+        :title="$t('chatReset')"
+        @click="resetConversation"
       />
       <UButton
         icon="i-ph-paper-plane-right"

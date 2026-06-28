@@ -212,7 +212,26 @@ const showChatBadge = ref(false)
 
 let badgeTimer: ReturnType<typeof setTimeout> | undefined
 
+// Mirrors the key AgentChat.vue persists its history under.
+const CHAT_STORAGE_KEY = 'agent-chat:v1:messages'
+
+const hasStoredConversation = () => {
+  try {
+    const raw = localStorage.getItem(CHAT_STORAGE_KEY)
+    if (!raw) return false
+    const msgs = JSON.parse(raw)
+    return Array.isArray(msgs) && msgs.some((m) => m?.role === 'user')
+  } catch {
+    return false
+  }
+}
+
 onMounted(() => {
+  // An existing conversation: reopen the chat and skip the attention badge.
+  if (hasStoredConversation()) {
+    chatOpen.value = true
+    return
+  }
   badgeTimer = setTimeout(() => {
     if (!chatOpen.value) showChatBadge.value = true
   }, 3000)
