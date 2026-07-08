@@ -23,6 +23,16 @@
               </div>
             </div>
           </a>
+
+          <a href="/referrals" class="link-card">
+            <div class="flex items-center gap-3">
+              <UIcon name="i-ph-gift" class="text-xl" />
+              <div>
+                <h3 class="font-medium">Referrals</h3>
+                <p class="text-sm text-gray-400">Tools &amp; services I recommend</p>
+              </div>
+            </div>
+          </a>
         </div>
       </section>
 

@@ -32,7 +32,7 @@ Optional `NUXT_DISCORD_WEBHOOK_URL` (→ `runtimeConfig.discordWebhookUrl`) rout
 - Nuxt 4 with modules `@nuxt/ui` (v4, not Pro), `@vueuse/nuxt`, `@nuxtjs/i18n`. Global CSS at `~/assets/css/main.css`.
 - Components auto-imported from `~/components`.
 - Sass available for SCSS in components.
-- UI theme set in `app.config.ts` — primary `lime`, gray `neutral`.
+- UI theme set in `app.config.ts` — primary `sand`, neutral `neutral`.
 
 ### Pages
 - `pages/index.vue` — main landing (hero, static skills list, social links). Hosts the AI chat widget (`<AgentChat/>`).
@@ -58,7 +58,7 @@ There is no shared store or content collection — experience data is **defined 
 - `pages/index.vue` is different: its `skills` ref is a **static, hand-maintained list** (not derived) and it does not own experience data.
 
 ### Internationalization
-- `i18n.config.ts` holds all `pl`/`en` messages in one file. Default locale is `pl`, strategy `no_prefix` (no locale URL prefix), legacy mode off (Vue I18n v9+ composition API).
+- `i18n/i18n.config.ts` holds all `pl`/`en` messages in one file. Default locale is `pl`, strategy `no_prefix` (no locale URL prefix), legacy mode off (Vue I18n v9+ composition API).
 - Pages mix two approaches: text routed through `$t()` keys vs. the dual-array / `locale`-conditional rendering used in `cv.vue` and `experience.vue`. Check which model a page uses before adding copy.
 
 ### Theme switching
