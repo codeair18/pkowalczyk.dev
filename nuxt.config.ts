@@ -10,6 +10,18 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  app: {
+    head: {
+      script: [
+        {
+          src: 'https://cloud.umami.is/script.js',
+          defer: true,
+          'data-website-id': '4e51e9bc-5971-48d5-bcdd-68978a533ada',
+        },
+      ],
+    },
+  },
+
   runtimeConfig: {
     // Server-only secrets. Nitro maps NUXT_OPENROUTER_API_KEY -> openrouterApiKey.
     openrouterApiKey: '',
