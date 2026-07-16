@@ -13,11 +13,14 @@
       <!-- Referrals -->
       <section class="mb-12">
         <div class="grid gap-4">
-          <a href="https://claude.ai/referral/43QSpM6BbQ" target="_blank" rel="noreferrer noopener" class="link-card">
+          <a href="https://claude.ai/referral/43QSpM6BbQ" target="_blank" rel="noreferrer noopener" class="link-card opacity-60">
             <div class="flex items-center gap-3">
               <UIcon name="i-simple-icons-anthropic" class="text-xl" />
               <div>
-                <h3 class="font-medium">Claude AI</h3>
+                <h3 class="font-medium flex items-center gap-2">
+                  Claude AI
+                  <span class="text-xs font-medium uppercase tracking-wide px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400">Expired</span>
+                </h3>
                 <p class="text-sm text-gray-400">Get started with Claude — Anthropic's AI assistant</p>
               </div>
             </div>
