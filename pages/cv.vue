@@ -3,7 +3,7 @@ const { locale } = useI18n()
 
 const experiencePl = ref([
   {
-    jobPosition: 'Lead Fullstack Developer',
+    jobPosition: 'Senior Fullstack Developer',
     dateInterval: '06.2023 — __.____',
     dateFrom: '06.2023',
     dateTo: 'present',
@@ -155,7 +155,7 @@ const experiencePl = ref([
 
 const experienceEn = ref([
   {
-    jobPosition: 'Lead Fullstack Developer',
+    jobPosition: 'Senior Fullstack Developer',
     dateInterval: '06.2023 — __.____',
     dateFrom: '06.2023',
     dateTo: 'present',
@@ -374,7 +374,7 @@ const cvClauseFinal = cvClause.replace('__COMPANY_NAMES__', companyNames);
         <a href="/">Przemek Kowalczyk</a>
       </h1>
       <h2 class="mt-3 text-lg font-medium tracking-tight text-gray-400 sm:text-xl">
-        Lead Full Stack Developer
+        Senior Full Stack Developer
       </h2>
       <p class="mt-4 max-w-md">{{ $t('aboutMe') }}</p>
       <ul class="experience__tech my-5 lg:mt-2 flex flex-wrap lg:mr-32">
