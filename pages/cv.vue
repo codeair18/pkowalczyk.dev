@@ -312,7 +312,7 @@ const educationPl = ref([
     dateTo: '2015',
     companyLink: 'https://uwm.edu.pl',
     direction: 'Geodezja i geoinformatyka (Inżynier)',
-    skills: ['PHP', 'Symfony', 'jQUery', 'MVC', 'Javascript', 'HTML', 'CSS', 'Bootstrap']
+    skills: ['PHP', 'Symfony', 'MVC', 'Javascript', 'HTML', 'CSS', 'Bootstrap']
   },
 ])
 
@@ -323,7 +323,7 @@ const educationEn = ref([
     dateTo: '10.2016',
     companyLink: 'https://coderslab.pl',
     direction: 'Backend Developer Bootcamp',
-    skills: ['PHP', 'Symfony', 'jQUery', 'MVC', 'Javascript', 'HTML', 'CSS', 'Bootstrap']
+    skills: ['PHP', 'Symfony', 'MVC', 'Javascript', 'HTML', 'CSS', 'Bootstrap']
   },
   {
     school: 'University of Warmia and Mazury in Olsztyn',
@@ -376,7 +376,7 @@ const cvClauseFinal = cvClause.replace('__COMPANY_NAMES__', companyNames);
       <h2 class="mt-3 text-lg font-medium tracking-tight text-gray-400 sm:text-xl">
         Senior Full Stack Developer
       </h2>
-      <p class="mt-4 max-w-md">{{ $t('aboutMe') }}</p>
+      <p class="mt-4 max-w-md">{{ $t('tagline') }}</p>
       <ul class="experience__tech my-5 lg:mt-2 flex flex-wrap lg:mr-32">
         <li
           v-for="skill in skills"
@@ -388,9 +388,6 @@ const cvClauseFinal = cvClause.replace('__COMPANY_NAMES__', companyNames);
           </div>
         </li>
       </ul>
-      <p>
-        {{ $t('aboutMeExtended') }}
-      </p>
     </div>
     <section class="experience">
       <UPageHeader :title="$t('experience')" class="my-2"/>
