@@ -23,6 +23,21 @@ export default defineNuxtConfig({
     },
   },
 
+  routeRules: {
+    // Blog is static markdown — prerender so Netlify serves built HTML
+    // instead of querying the Content SQLite DB in a serverless function.
+    '/blog': { prerender: true },
+    '/blog/**': { prerender: true },
+  },
+
+  nitro: {
+    prerender: {
+      // Crawl from /blog so article pages linked there get prerendered too.
+      crawlLinks: true,
+      routes: ['/blog'],
+    },
+  },
+
   runtimeConfig: {
     // Server-only secrets. Nitro maps NUXT_OPENROUTER_API_KEY -> openrouterApiKey.
     openrouterApiKey: '',
