@@ -113,8 +113,10 @@ const route = useRoute()
 const { locale, t } = useI18n()
 
 const articleSlug = computed(() => {
+  // Netlify redirects prerendered pages to a trailing-slash URL, which adds
+  // an empty segment to the catch-all param — drop it before matching.
   return Array.isArray(route.params.slug)
-    ? route.params.slug.join('/')
+    ? route.params.slug.filter(Boolean).join('/')
     : route.params.slug
 })
 
