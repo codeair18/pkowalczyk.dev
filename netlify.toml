@@ -1,0 +1,3 @@
+[build.environment]
+  # Nuxt/Nitro can exceed Node's default heap while bundling the server output.
+  NODE_OPTIONS = "--max-old-space-size=4096"
