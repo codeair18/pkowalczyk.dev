@@ -4,6 +4,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/ui',
+    '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
   ],

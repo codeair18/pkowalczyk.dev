@@ -134,6 +134,15 @@
           </NuxtLink>
         </li>
         <li class="mr-5 text-xs shrink-0 cursor-pointer">
+          <NuxtLink
+            to="/blog"
+            aria-label="Blog"
+            title="Blog">
+            <span class="sr-only">Blog</span>
+            <UIcon name="i-ph-article" class="h-6 w-6 opacity-80 hover:opacity-100 transition-opacity"/>
+          </NuxtLink>
+        </li>
+        <li class="mr-5 text-xs shrink-0 cursor-pointer">
           <a
             class="cursor-pointer"
             @click="contactMe"

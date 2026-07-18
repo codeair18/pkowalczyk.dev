@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -22,7 +22,7 @@ There is no test, lint, or typecheck script wired up — `tsconfig.json` just ex
 `npm run dev` starts a regular HTTP server on `http://localhost:3001`. The Nuxt dev port (`devServer.port`) is **3001**, not the default 3000.
 
 ### Environment
-The AI chat needs OpenRouter credentials. Copy `.env.example` to `.env` and set `NUXT_OPENROUTER_API_KEY` (optional `NUXT_OPENROUTER_MODEL`, default `anthropic/claude-haiku-4.5`). Nitro maps these env vars onto `runtimeConfig.openrouterApiKey` / `openrouterModel`. Without a key the chat endpoint streams a bilingual "temporarily unavailable" message instead of erroring.
+The AI chat needs OpenRouter credentials. Copy `.env.example` to `.env` and set `NUXT_OPENROUTER_API_KEY` (optional `NUXT_OPENROUTER_MODEL`, default `anthropic/Codex-haiku-4.5`). Nitro maps these env vars onto `runtimeConfig.openrouterApiKey` / `openrouterModel`. Without a key the chat endpoint streams a bilingual "temporarily unavailable" message instead of erroring.
 
 Optional `NUXT_DISCORD_WEBHOOK_URL` (→ `runtimeConfig.discordWebhookUrl`) routes submitted leads to a Discord channel; when unset the lead sink only logs to the server console. All three are server-only secrets declared in `nuxt.config.ts` `runtimeConfig`.
 

@@ -53,13 +53,13 @@ Zebrane leady są obecnie wypisywane w konsoli serwera (mock w `server/api/lead.
 
 ### Serwer deweloperski
 
-Uruchom serwer deweloperski z HTTPS na porcie 3001:
+Uruchom serwer deweloperski na porcie 3001:
 
 ```bash
 npm run dev
 ```
 
-Strona będzie dostępna pod adresem `https://localhost:3001`
+Strona będzie dostępna pod adresem `http://localhost:3001`
 
 ### Komendy budowania
 

@@ -1,0 +1,88 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="30" x2="1120" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071A20"/>
+      <stop offset="0.52" stop-color="#061510"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="terminal" x1="138" y1="90" x2="970" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B2023"/>
+      <stop offset="1" stop-color="#07110F"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="782" y1="174" x2="1000" y2="482" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EE7B7"/>
+      <stop offset="0.55" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(904 326) rotate(90) scale(290)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#6EE7B7" stroke-opacity="0.055"/>
+    </pattern>
+    <filter id="shadow" x="42" y="42" width="1116" height="598" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="28" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="shieldGlow" x="689" y="111" width="420" height="432" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="15" stdDeviation="28" flood-color="#10B981" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <circle cx="904" cy="326" r="290" fill="url(#glow)"/>
+  <circle cx="110" cy="95" r="170" fill="#22D3EE" fill-opacity="0.035"/>
+
+  <g filter="url(#shadow)">
+    <rect x="98" y="86" width="1004" height="510" rx="30" fill="url(#terminal)"/>
+    <rect x="98.75" y="86.75" width="1002.5" height="508.5" rx="29.25" stroke="#A7F3D0" stroke-opacity="0.2" stroke-width="1.5"/>
+  </g>
+
+  <path d="M99 154H1101" stroke="#A7F3D0" stroke-opacity="0.14"/>
+  <circle cx="136" cy="121" r="7" fill="#FB7185"/>
+  <circle cx="162" cy="121" r="7" fill="#FBBF24"/>
+  <circle cx="188" cy="121" r="7" fill="#34D399"/>
+  <rect x="467" y="108" width="266" height="27" rx="13.5" fill="#020617" fill-opacity="0.7"/>
+  <circle cx="488" cy="121.5" r="4.5" fill="#34D399"/>
+  <text x="502" y="126" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">agent-security.config</text>
+
+  <text x="148" y="219" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17">$</text>
+  <text x="175" y="219" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">/sandbox</text>
+  <rect x="148" y="253" width="435" height="1" fill="#A7F3D0" fill-opacity="0.12"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">
+    <text x="148" y="297" fill="#94A3B8">filesystem</text>
+    <text x="298" y="297" fill="#A7F3D0">workspace only</text>
+    <circle cx="548" cy="291" r="11" fill="#10B981" fill-opacity="0.18"/>
+    <path d="M543 291L547 295L554 287" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="148" y="343" fill="#94A3B8">network</text>
+    <text x="298" y="343" fill="#A7F3D0">allowlisted hosts</text>
+    <circle cx="548" cy="337" r="11" fill="#10B981" fill-opacity="0.18"/>
+    <path d="M543 337L547 341L554 333" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <text x="148" y="389" fill="#94A3B8">credentials</text>
+    <text x="298" y="389" fill="#A7F3D0">masked &amp; protected</text>
+    <circle cx="548" cy="383" r="11" fill="#10B981" fill-opacity="0.18"/>
+    <path d="M543 383L547 387L554 379" stroke="#6EE7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <rect x="148" y="433" width="435" height="92" rx="14" fill="#020617" fill-opacity="0.56" stroke="#A7F3D0" stroke-opacity="0.1"/>
+  <text x="171" y="468" fill="#34D399" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">sandbox.status</text>
+  <text x="171" y="497" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700">BOUNDARIES ENFORCED</text>
+
+  <g filter="url(#shieldGlow)">
+    <path d="M895 177C931 202 972 217 1015 223V327C1015 409 966 473 895 501C824 473 775 409 775 327V223C818 217 859 202 895 177Z" fill="url(#shield)"/>
+    <path d="M895 202C925 221 958 233 991 239V327C991 393 953 445 895 471C837 445 799 393 799 327V239C832 233 865 221 895 202Z" fill="#052E24" fill-opacity="0.78" stroke="#A7F3D0" stroke-opacity="0.38"/>
+  </g>
+
+  <rect x="846" y="316" width="98" height="79" rx="18" fill="#A7F3D0"/>
+  <path d="M866 316V293C866 277 879 264 895 264C911 264 924 277 924 293V316" stroke="#A7F3D0" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="895" cy="350" r="9" fill="#047857"/>
+  <path d="M895 356V371" stroke="#047857" stroke-width="8" stroke-linecap="round"/>
+
+  <rect x="776" y="538" width="238" height="34" rx="17" fill="#052E24" stroke="#34D399" stroke-opacity="0.35"/>
+  <circle cx="800" cy="555" r="5" fill="#34D399"/>
+  <text x="817" y="561" fill="#D1FAE5" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">PROMPT INJECTION READY</text>
+</svg>
