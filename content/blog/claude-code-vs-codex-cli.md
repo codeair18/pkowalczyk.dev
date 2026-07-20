@@ -4,7 +4,7 @@ description: "Porównanie Claude Code i Codex CLI: architektura, dokładność k
 locale: "pl"
 slug: "claude-code-vs-codex-cli"
 date: "2026-07-20"
-image: "/images/blog/claude-code-vs-codex-cli.svg"
+image: "/images/blog/claude-code-vs-codex-cli.png"
 author:
   name: "Przemek Kowalczyk"
   role: "Senior Full Stack Developer"
