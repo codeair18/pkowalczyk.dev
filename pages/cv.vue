@@ -1,6 +1,12 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 
+useStaticPageSeo({
+  title: 'CV',
+  description: 'Curriculum vitae of Przemek Kowalczyk — Senior Full-Stack Developer.',
+  path: '/cv',
+})
+
 const experiencePl = ref([
   {
     jobPosition: 'Senior Fullstack Developer',

@@ -205,21 +205,10 @@
 <script setup lang="ts">
 import DayNight2 from "~/components/switcher/DayNight2.vue";
 
-useHead({
-  meta: [
-    {charset: 'utf-8'},
-    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-    {property: 'og:title', content: 'Przemek Kowalczyk - Developer'},
-    {
-      property: 'og:description',
-      content: 'Pomagam w tworzeniu rozwiązań skrojonych na miarę biznesu oraz optymalizuje procesy ich wdrażania.'
-    },
-    {property: 'og:image', content: 'https://pkowalczyk.dev/static/preview.png'},
-    {property: 'og:url', content: 'https://pkowalczyk.dev'},
-    {property: 'og:type', content: 'website'}
-  ],
-  title: 'Przemek Kowalczyk - Developer',
-
+useStaticPageSeo({
+  title: 'Experience',
+  description: 'Pomagam w tworzeniu rozwiązań skrojonych na miarę biznesu oraz optymalizuje procesy ich wdrażania.',
+  path: '/experience',
 })
 
 const route = useRoute()

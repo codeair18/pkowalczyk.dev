@@ -138,13 +138,10 @@ const formatDate = (date?: string | Date) => date
   ? dateFormatter.value.format(new Date(date))
   : ''
 
-useSeoMeta({
-  title: 'Blog — Przemek Kowalczyk',
+useStaticPageSeo({
+  title: 'Blog',
   description: () => t('blogSeoDescription'),
-  ogTitle: 'Blog — Przemek Kowalczyk',
-  ogDescription: () => t('blogSeoDescription'),
-  ogType: 'website',
-  ogUrl: 'https://pkowalczyk.dev/blog',
+  path: '/blog',
 })
 </script>
 

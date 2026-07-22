@@ -32,17 +32,10 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { property: 'og:title', content: 'Referrals - Przemek Kowalczyk' },
-    { property: 'og:description', content: 'Tools and services Przemek Kowalczyk uses and recommends' },
-    { property: 'og:image', content: 'https://pkowalczyk.dev/static/preview.png' },
-    { property: 'og:url', content: 'https://pkowalczyk.dev/referrals' },
-    { property: 'og:type', content: 'website' }
-  ],
-  title: 'Referrals - Przemek Kowalczyk',
+useStaticPageSeo({
+  title: 'Referrals',
+  description: 'Tools and services Przemek Kowalczyk uses and recommends',
+  path: '/referrals',
 })
 </script>
 
