@@ -345,9 +345,9 @@ const experience = ref([
   },
   {
     jobPosition: 'Fullstack Developer',
-    dateInterval: '03.2018 — 2019',
+    dateInterval: '03.2018 — 2022',
     dateFrom: '03.2018',
-    dateTo: '2019',
+    dateTo: '2022',
     companyName: 'Comperia',
     companyLink: 'https://comperia.pl',
     projectUrl: 'https://telepolis.pl',

@@ -3,7 +3,7 @@ const { locale } = useI18n()
 
 useStaticPageSeo({
   title: 'CV',
-  description: 'Curriculum vitae of Przemek Kowalczyk — Software Engineer.',
+  description: 'Curriculum vitae of Przemek Kowalczyk, Software Engineer.',
   path: '/cv',
 })
 
@@ -23,11 +23,11 @@ const experiencePl = ref([
       },
     ],
     responsibilities: [
-      'Projektowanie i rozwój <b>architektury mikroserwisowej</b> instytucji płatniczej — usługi w <b>PHP (Symfony)</b> i <b>Node.js</b>, komunikacja asynchroniczna przez <b>RabbitMQ</b>.',
+      'Projektowanie i rozwój <b>architektury mikroserwisowej</b> instytucji płatniczej, opartej o usługi w <b>PHP (Symfony)</b> i <b>Node.js</b> komunikujące się asynchronicznie przez <b>RabbitMQ</b>.',
       'Przekładanie wymagań biznesowych na <b>kontrakty API, granice usług i model danych</b>.',
-      'Utrzymanie systemów produkcyjnych na <b>Kubernetes / Google Cloud Platform</b> — monitoring, alerting i analiza incydentów.',
+      'Utrzymanie systemów produkcyjnych na <b>Kubernetes / Google Cloud Platform</b>, wraz z monitoringiem, alertingiem i analizą incydentów.',
       'Optymalizacja <b>wydajności i niezawodności</b> krytycznych ścieżek płatniczych: profilowanie zapytań, warstwy cache, redukcja czasu odpowiedzi API.',
-      'Automatyzacja <b>CI/CD</b> — build, testy i wdrożenia, skracające pętlę informacji zwrotnej w zespole.',
+      'Automatyzacja <b>CI/CD</b> dla buildów, testów i wdrożeń, co skraca pętlę informacji zwrotnej w zespole.',
       'Budowa interfejsów w <b>Vue / Nuxt</b> zintegrowanych z API płatniczym.',
       '<b>Code review</b>, standardy kodowania i testów oraz mentoring pozostałych inżynierów.',
       'Prowadzenie nowych funkcjonalności od projektu technicznego po wdrożenie produkcyjne.'
@@ -51,7 +51,7 @@ const experiencePl = ref([
   //   ],
   //   i8nCode: 'cvior',
   //   responsibilities: [
-  //     'Projektowanie, rozwój i utrzymanie aplikacji – zarządzam całym procesem wytwarzania oprogramowania.',
+  //     'Projektowanie, rozwój i utrzymanie aplikacji. Zarządzam całym procesem wytwarzania oprogramowania.',
   //     'Optymalizacja infrastruktury, zapewniająca <b>wysoką wydajność i skalowalność.</b>',
   //     'Wdrożenie CI/CD oraz orkiestracja mikroserwisów w Kubernetesie.',
   //   ],
@@ -90,7 +90,7 @@ const experiencePl = ref([
     projectUrl: 'https://silkycoders.pl',
     i8nCode: 'silkyCoders',
     responsibilities: [
-      'Refaktoryzacja <b>legacy</b> modułów systemu zarządzania produktami detalicznymi — wydzielanie domen i porządkowanie zależności.',
+      'Refaktoryzacja <b>legacy</b> modułów systemu zarządzania produktami detalicznymi, z wydzieleniem domen i uporządkowaniem zależności.',
       'Migracja aplikacji na architekturę opartą o <b>DDD</b>, z naciskiem na testowalność kodu.',
       'Konteneryzacja środowisk w <b>Dockerze</b> i przygotowanie usług do uruchamiania na <b>Kubernetes</b>.',
       'Konsultowanie rozwiązań technicznych i szacowanie zakresu prac razem z zespołem.',
@@ -115,7 +115,7 @@ const experiencePl = ref([
     jobPosition: 'Fullstack Developer',
     dateInterval: '03.2018 — 2022',
     dateFrom: '03.2018',
-    dateTo: '2019',
+    dateTo: '2022',
     companyName: 'Comperia',
     companyLink: 'https://comperia.pl',
     projectUrl: 'https://telepolis.pl',
@@ -135,9 +135,9 @@ const experiencePl = ref([
     ],
     i8nCode: 'firstComperia',
     responsibilities: [
-      'Migracja portalu <b>Telepolis.pl</b> z autorskiego systemu na <b>Symfony</b> — przepisanie modelu danych i warstwy prezentacji.',
+      'Migracja portalu <b>Telepolis.pl</b> z autorskiego systemu na <b>Symfony</b>, z przepisaniem modelu danych i warstwy prezentacji.',
       'Implementacja <b>chatbota</b> wspierającego zespół obsługi klienta.',
-      'Rozwój <b>ComperiaRaty.pl</b> i <b>Comfino.pl</b> — procesy wnioskowania o finansowanie i integracje z API partnerów.',
+      'Rozwój procesów wnioskowania o finansowanie i integracji z API partnerów w <b>ComperiaRaty.pl</b> i <b>Comfino.pl</b>.',
       'Projektowanie usług uruchamianych w <b>Dockerze/Kubernetes</b> na <b>Google Cloud Platform</b>, z kolejkami <b>RabbitMQ</b>.',
       'Rozwój interfejsów w <b>Vue/Nuxt</b> oraz usług w <b>Node.js</b>.',
     ],
@@ -151,7 +151,7 @@ const experiencePl = ref([
     companyName: 'Konsult Expert',
     i8nCode: 'konsultExpert',
     responsibilities: [
-      'Rozwój platformy medycznej do konsultacji online — backend w <b>Symfony</b>, warstwa widoku w <b>Twig/jQuery</b>.',
+      'Rozwój platformy medycznej do konsultacji online z backendem w <b>Symfony</b> i warstwą widoku w <b>Twig/jQuery</b>.',
       'Implementacja wideorozmów, czatu i wymiany plików w oparciu o <b>Twilio</b>.',
       'Integracja płatności online <b>Przelewy24</b>.',
       'Współpraca z grafikiem przy wdrożeniu responsywnego interfejsu użytkownika.',
@@ -160,7 +160,7 @@ const experiencePl = ref([
   }
 ])
 
-// Keep this array in lockstep with `experiencePl` — same roles, same order.
+// Keep this array in lockstep with `experiencePl`: same roles, same order.
 const experienceEn = ref([
   {
     jobPosition: 'Senior Fullstack Developer',
@@ -177,11 +177,11 @@ const experienceEn = ref([
       },
     ],
     responsibilities: [
-      'Designing and evolving the <b>microservice architecture</b> of a payment institution — services in <b>PHP (Symfony)</b> and <b>Node.js</b>, asynchronous messaging over <b>RabbitMQ</b>.',
+      'Designing and evolving the <b>microservice architecture</b> of a payment institution, built from <b>PHP (Symfony)</b> and <b>Node.js</b> services messaging asynchronously over <b>RabbitMQ</b>.',
       'Translating business requirements into <b>API contracts, service boundaries and data models</b>.',
-      'Running production systems on <b>Kubernetes / Google Cloud Platform</b> — monitoring, alerting and incident analysis.',
+      'Running production systems on <b>Kubernetes / Google Cloud Platform</b>, including monitoring, alerting and incident analysis.',
       'Improving <b>performance and reliability</b> of critical payment paths: query profiling, caching layers, lower API response times.',
-      'Automating <b>CI/CD</b> — builds, tests and deployments that shorten the team feedback loop.',
+      'Automating <b>CI/CD</b> for builds, tests and deployments that shorten the team feedback loop.',
       'Building <b>Vue / Nuxt</b> interfaces on top of the payment API.',
       '<b>Code review</b>, coding and testing standards, and mentoring other engineers.',
       'Owning new features end to end, from technical design to production rollout.'
@@ -205,7 +205,7 @@ const experienceEn = ref([
   //   ],
   //   i8nCode: 'cvior',
   //   responsibilities: [
-  //     'Designing, developing and maintaining the application — owning the whole software development lifecycle.',
+  //     'Designing, developing and maintaining the application. I own the whole software development lifecycle.',
   //     'Optimizing infrastructure to ensure <b>high performance and scalability.</b>',
   //     'Implementing CI/CD and orchestrating microservices with Kubernetes.',
   //   ],
@@ -244,7 +244,7 @@ const experienceEn = ref([
     projectUrl: 'https://silkycoders.pl',
     i8nCode: 'silkyCoders',
     responsibilities: [
-      'Refactoring <b>legacy</b> modules of a retail product management system — carving out domains and untangling dependencies.',
+      'Refactoring <b>legacy</b> modules of a retail product management system, carving out domains and untangling dependencies.',
       'Migrating the application to a <b>DDD</b>-based architecture, with testability as the driver.',
       'Containerizing environments with <b>Docker</b> and preparing services to run on <b>Kubernetes</b>.',
       'Reviewing technical options and sizing work together with the team.',
@@ -269,7 +269,7 @@ const experienceEn = ref([
     jobPosition: 'Fullstack Developer',
     dateInterval: '03.2018 — 2022',
     dateFrom: '03.2018',
-    dateTo: '2019',
+    dateTo: '2022',
     companyName: 'Comperia',
     companyLink: 'https://comperia.pl',
     projectUrl: 'https://telepolis.pl',
@@ -289,9 +289,9 @@ const experienceEn = ref([
     ],
     i8nCode: 'firstComperia',
     responsibilities: [
-      'Migrating the <b>Telepolis.pl</b> portal from an in-house system to <b>Symfony</b> — rewriting the data model and the presentation layer.',
+      'Migrating the <b>Telepolis.pl</b> portal from an in-house system to <b>Symfony</b>, rewriting the data model and the presentation layer.',
       'Implementing a <b>chatbot</b> supporting the customer service team.',
-      'Developing <b>ComperiaRaty.pl</b> and <b>Comfino.pl</b> — financing application flows and partner API integrations.',
+      'Developing financing application flows and partner API integrations in <b>ComperiaRaty.pl</b> and <b>Comfino.pl</b>.',
       'Designing services running on <b>Docker/Kubernetes</b> on <b>Google Cloud Platform</b>, with <b>RabbitMQ</b> queues.',
       'Building <b>Vue/Nuxt</b> interfaces and <b>Node.js</b> services.',
     ],
@@ -305,7 +305,7 @@ const experienceEn = ref([
     companyName: 'Konsult Expert',
     i8nCode: 'konsultExpert',
     responsibilities: [
-      'Developing a medical platform for online consultations — <b>Symfony</b> backend, <b>Twig/jQuery</b> view layer.',
+      'Developing a medical platform for online consultations with a <b>Symfony</b> backend and a <b>Twig/jQuery</b> view layer.',
       'Implementing video calls, chat and file exchange on top of <b>Twilio</b>.',
       'Integrating <b>Przelewy24</b> online payments.',
       'Working with a designer to ship a responsive user interface.',
@@ -362,7 +362,7 @@ const education = computed(() => {
   return locale.value === 'pl' ? educationPl.value : educationEn.value
 })
 
-// Grouped instead of derived from `experience` — a flat cloud of every tag ever used
+// Grouped instead of derived from `experience`, because a flat cloud of every tag ever used
 // reads like a keyword dump; recruiters scan a CV by category.
 // Keep both arrays in lockstep, same as `experiencePl` / `experienceEn`.
 const skillGroupsPl = [
