@@ -155,16 +155,7 @@ const breadcrumbs = computed(() => [
 
 const tocLinks = computed(() => article.value?.body?.toc?.links ?? [])
 
-useSeoMeta({
-  title: () => `${article.value?.title} — Przemek Kowalczyk`,
-  description: () => article.value?.description,
-  ogTitle: () => article.value?.title,
-  ogDescription: () => article.value?.description,
-  ogImage: () => `https://pkowalczyk.dev${article.value?.image}`,
-  ogType: 'article',
-  ogUrl: () => `https://pkowalczyk.dev/blog/${articleSlug.value}`,
-  articlePublishedTime: () => article.value?.date,
-})
+useArticleSeo(article, computed(() => `/blog/${articleSlug.value}`))
 </script>
 
 <style scoped>

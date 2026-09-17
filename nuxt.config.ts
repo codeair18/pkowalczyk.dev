@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@nuxtjs/i18n',
+    'nuxt-og-image',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -44,6 +45,17 @@ export default defineNuxtConfig({
     openrouterModel: 'anthropic/claude-haiku-4.5',
     // Nitro maps NUXT_DISCORD_WEBHOOK_URL -> discordWebhookUrl. Empty = Discord send skipped.
     discordWebhookUrl: '',
+    public: {
+      siteUrl: 'https://pkowalczyk.dev',
+      siteName: 'Przemek Kowalczyk',
+    },
+  },
+
+  ogImage: {
+    defaults: {
+      width: 1200,
+      height: 630,
+    },
   },
 
   i18n: {

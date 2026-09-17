@@ -53,17 +53,10 @@ import DayNight2 from "~/components/switcher/DayNight2.vue";
 
 const {locale, setLocale} = useI18n()
 
-useHead({
-  meta: [
-    {charset: 'utf-8'},
-    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-    {property: 'og:title', content: 'Certifications - Przemek Kowalczyk'},
-    {property: 'og:description', content: 'Professional certifications of Przemek Kowalczyk.'},
-    {property: 'og:image', content: 'https://pkowalczyk.dev/static/preview.png'},
-    {property: 'og:url', content: 'https://pkowalczyk.dev/certifications'},
-    {property: 'og:type', content: 'website'}
-  ],
-  title: 'Certifications - Przemek Kowalczyk',
+useStaticPageSeo({
+  title: 'Certifications',
+  description: 'Professional certifications of Przemek Kowalczyk.',
+  path: '/certifications',
 })
 
 const certifications = ref([

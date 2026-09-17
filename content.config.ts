@@ -6,9 +6,12 @@ export default defineContentConfig({
       type: 'page',
       source: 'blog/**/*.md',
       schema: z.object({
+        title: z.string().min(1),
+        description: z.string().min(1),
         locale: z.enum(['pl', 'en']),
         slug: z.string(),
         date: z.string(),
+        updated: z.string().optional(),
         tags: z.array(z.string()).default([]),
         image: z.string(),
         author: z.object({

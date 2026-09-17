@@ -1,6 +1,12 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 
+useStaticPageSeo({
+  title: 'CV',
+  description: 'Curriculum vitae of Przemek Kowalczyk — Software Engineer.',
+  path: '/cv',
+})
+
 const experiencePl = ref([
   {
     jobPosition: 'Senior Fullstack Developer',
@@ -17,17 +23,17 @@ const experiencePl = ref([
       },
     ],
     responsibilities: [
-      'Współpraca z interesariuszami w celu <b>analizy wymagań biznesowych i ich implementacji w architekturze systemu.</b>',
-      'Implementacja automatyzacji usprawniającą pracę zespołu developerskiego w tym procesów <b>CI/CD</b> oraz monitoringu aplikacji.',
-      'Mentoring i wsparcie dla zespołu programistycznego, wprowadzanie <b>dobrych praktyk kodowania oraz DevOps.</b>',
-      'Odpowiedzialność za <b>stabilność i optymalizację systemów,</b> zapewniając <b>wysoką wydajność oraz bezpieczeństwo.</b>',
-      'Tworzenie i rozwój <b>mikroserwisowej architektury</b> w środowisku <b>Docker/Kubernetes</b> na <b>Google Cloud Platform.</b>',
-      'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
-      'Przeprowadzanie <b>code review</b> oraz dbanie o jakość kodu w zespole.',
-      'Kierowanie procesem <b>wdrażania</b> nowych funkcjonalności, od fazy planowania po produkcję.'
+      'Projektowanie i rozwój <b>architektury mikroserwisowej</b> instytucji płatniczej — usługi w <b>PHP (Symfony)</b> i <b>Node.js</b>, komunikacja asynchroniczna przez <b>RabbitMQ</b>.',
+      'Przekładanie wymagań biznesowych na <b>kontrakty API, granice usług i model danych</b>.',
+      'Utrzymanie systemów produkcyjnych na <b>Kubernetes / Google Cloud Platform</b> — monitoring, alerting i analiza incydentów.',
+      'Optymalizacja <b>wydajności i niezawodności</b> krytycznych ścieżek płatniczych: profilowanie zapytań, warstwy cache, redukcja czasu odpowiedzi API.',
+      'Automatyzacja <b>CI/CD</b> — build, testy i wdrożenia, skracające pętlę informacji zwrotnej w zespole.',
+      'Budowa interfejsów w <b>Vue / Nuxt</b> zintegrowanych z API płatniczym.',
+      '<b>Code review</b>, standardy kodowania i testów oraz mentoring pozostałych inżynierów.',
+      'Prowadzenie nowych funkcjonalności od projektu technicznego po wdrożenie produkcyjne.'
     ],
     i8nCode: 'comperiaPay',
-    skills: ['PHP', 'Symfony', 'JavaScript', 'Nuxt', 'Vue', 'Docker', 'Kubernetes', 'Google Cloud Platform', 'RabbitMQ']
+    skills: ['PHP', 'Symfony', 'TypeScript', 'Node.js', 'Vue', 'Nuxt', 'Docker', 'Kubernetes', 'Google Cloud Platform', 'RabbitMQ']
   },
   // {
   //   jobPosition: 'Founder',
@@ -84,9 +90,10 @@ const experiencePl = ref([
     projectUrl: 'https://silkycoders.pl',
     i8nCode: 'silkyCoders',
     responsibilities: [
-      'Przeprojektowanie <b>starych, mało wydajnych funkcjonalności</b> oraz rozwój systemu zarządzania produktami detalicznymi.',
-      'Migrowanie aplikacji na nową architekturę',
-      'Konsultowanie rozwiązań technicznych z zespołem na podstawie wymagań.',
+      'Refaktoryzacja <b>legacy</b> modułów systemu zarządzania produktami detalicznymi — wydzielanie domen i porządkowanie zależności.',
+      'Migracja aplikacji na architekturę opartą o <b>DDD</b>, z naciskiem na testowalność kodu.',
+      'Konteneryzacja środowisk w <b>Dockerze</b> i przygotowanie usług do uruchamiania na <b>Kubernetes</b>.',
+      'Konsultowanie rozwiązań technicznych i szacowanie zakresu prac razem z zespołem.',
     ],
     skills: ["PHP", 'Symfony', 'Docker', 'Kubernetes', 'DDD', 'Scrum']
   },
@@ -128,11 +135,11 @@ const experiencePl = ref([
     ],
     i8nCode: 'firstComperia',
     responsibilities: [
-      'Migracja portalu Telepolis.pl ze starego autorskiego systemu na <b>Symfony</b>',
-      'Implementacja <b>chatobota</b> wspierającego zespół obsługi klienta.',
-      'Współpraca techniczna i produktowa nad tworzeniem i rozwojem <b>ComperiaRaty.pl</b> oraz <b>Comfino.pl</b>.',
-      'Odpowiedzialność za <b>stabilność i optymalizację systemów,</b> zapewniając <b>wysoką wydajność oraz bezpieczeństwo.</b>',
-      'Projektowanie i wdrażanie skalowalnych aplikacji webowych opartych na <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
+      'Migracja portalu <b>Telepolis.pl</b> z autorskiego systemu na <b>Symfony</b> — przepisanie modelu danych i warstwy prezentacji.',
+      'Implementacja <b>chatbota</b> wspierającego zespół obsługi klienta.',
+      'Rozwój <b>ComperiaRaty.pl</b> i <b>Comfino.pl</b> — procesy wnioskowania o finansowanie i integracje z API partnerów.',
+      'Projektowanie usług uruchamianych w <b>Dockerze/Kubernetes</b> na <b>Google Cloud Platform</b>, z kolejkami <b>RabbitMQ</b>.',
+      'Rozwój interfejsów w <b>Vue/Nuxt</b> oraz usług w <b>Node.js</b>.',
     ],
     skills: ["PHP", 'Symfony', 'JavaScript', 'Node.js', 'Nuxt', 'Vue', 'Kubernetes', 'Docker', 'Google Cloud Platform', 'RabbitMQ']
   },
@@ -144,15 +151,16 @@ const experiencePl = ref([
     companyName: 'Konsult Expert',
     i8nCode: 'konsultExpert',
     responsibilities: [
-      'Rozwijanie platformy medycznej do konsultacji online.',
-      'Aktywna <b>współpraca z grafikiem</b> w celu dostarczenia responsywnego i przyjaznego interfejsu użytkownika.',
-      'Integracja z systemem płatności online <b>Przelewy24</b>.',
-      'Implementacja interfejsu razem z logiką do wideorozmów z <b>Twilio</b>, chatu oraz systemu wymiany plików.',
+      'Rozwój platformy medycznej do konsultacji online — backend w <b>Symfony</b>, warstwa widoku w <b>Twig/jQuery</b>.',
+      'Implementacja wideorozmów, czatu i wymiany plików w oparciu o <b>Twilio</b>.',
+      'Integracja płatności online <b>Przelewy24</b>.',
+      'Współpraca z grafikiem przy wdrożeniu responsywnego interfejsu użytkownika.',
     ],
     skills: ["PHP", 'Symfony', 'JavaScript', 'Twig', 'jQuery']
   }
 ])
 
+// Keep this array in lockstep with `experiencePl` — same roles, same order.
 const experienceEn = ref([
   {
     jobPosition: 'Senior Fullstack Developer',
@@ -169,60 +177,63 @@ const experienceEn = ref([
       },
     ],
     responsibilities: [
-      'Collaborating with stakeholders to <b>analyze business requirements and implement them within the system architecture.</b>',
-      'Mentoring and supporting the development team, introducing <b>best coding and DevOps practices.</b>',
-      'Ensuring <b>system stability and optimization</b>, maintaining <b>high performance and security.</b>',
-      'Designing and developing <b>microservice architecture</b> in a <b>Docker/Kubernetes</b> environment on <b>Google Cloud Platform.</b>',
-      'Designing and implementing scalable web applications using <b>PHP (Symfony), Vue, Nuxt, Node.js.</b>',
+      'Designing and evolving the <b>microservice architecture</b> of a payment institution — services in <b>PHP (Symfony)</b> and <b>Node.js</b>, asynchronous messaging over <b>RabbitMQ</b>.',
+      'Translating business requirements into <b>API contracts, service boundaries and data models</b>.',
+      'Running production systems on <b>Kubernetes / Google Cloud Platform</b> — monitoring, alerting and incident analysis.',
+      'Improving <b>performance and reliability</b> of critical payment paths: query profiling, caching layers, lower API response times.',
+      'Automating <b>CI/CD</b> — builds, tests and deployments that shorten the team feedback loop.',
+      'Building <b>Vue / Nuxt</b> interfaces on top of the payment API.',
+      '<b>Code review</b>, coding and testing standards, and mentoring other engineers.',
+      'Owning new features end to end, from technical design to production rollout.'
     ],
     i8nCode: 'comperiaPay',
-    skills: ['PHP', 'Symfony', 'Vue', 'Nuxt', 'Docker', 'Node.js', 'Kubernetes', 'Google Cloud Platform']
+    skills: ['PHP', 'Symfony', 'TypeScript', 'Node.js', 'Vue', 'Nuxt', 'Docker', 'Kubernetes', 'Google Cloud Platform', 'RabbitMQ']
   },
-  {
-    jobPosition: 'Founder',
-    dateInterval: '04.2024 — __.____',
-    dateFrom: '04.2024',
-    dateTo: 'present',
-    companyName: 'Cvior',
-    isPartTime: true,
-    companyLink: 'https://cvior.com',
-    projects: [
-      {
-        name: 'Cvior',
-        url: 'https://cvior.com'
-      },
-    ],
-    i8nCode: 'cvior',
-    responsibilities: [
-      'Designing, developing, and maintaining the application – managing the entire software development lifecycle.',
-      'Optimizing infrastructure to ensure <b>high performance and scalability.</b>',
-      'Implementing CI/CD and orchestrating microservices with Kubernetes.',
-    ],
-    skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js', 'Kubernetes']
-  },
-  {
-    jobPosition: 'Fullstack Developer',
-    dateInterval: '01.2023 — 06.2023',
-    dateFrom: '01.2023',
-    dateTo: '06.2023',
-    companyName: 'UmbrellAI',
-    isPartTime: true,
-    companyLink: 'https://umbrell.ai',
-    projectUrl: 'https://umbrell.ai',
-    projects: [
-      {
-        name: 'UmbrellAI',
-        url: 'https://umbrell.ai'
-      },
-    ],
-    i8nCode: 'umbrellAi',
-    responsibilities: [
-      'Developing an application aggregating insurance companies, enabling online policy purchases.',
-      'Designing and implementing new features in <b>Vue, Nuxt, Node.js.</b>',
-      'Optimizing backend processes and integrating with insurance company APIs.'
-    ],
-    skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js']
-  },
+  // {
+  //   jobPosition: 'Founder',
+  //   dateInterval: '04.2024 — __.____',
+  //   dateFrom: '04.2024',
+  //   dateTo: 'present',
+  //   companyName: 'Cvior',
+  //   isPartTime: true,
+  //   companyLink: 'https://cvior.com',
+  //   projects: [
+  //     {
+  //       name: 'Cvior',
+  //       url: 'https://cvior.com'
+  //     },
+  //   ],
+  //   i8nCode: 'cvior',
+  //   responsibilities: [
+  //     'Designing, developing and maintaining the application — owning the whole software development lifecycle.',
+  //     'Optimizing infrastructure to ensure <b>high performance and scalability.</b>',
+  //     'Implementing CI/CD and orchestrating microservices with Kubernetes.',
+  //   ],
+  //   skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js', 'Kubernetes']
+  // },
+  // {
+  //   jobPosition: 'Fullstack Developer',
+  //   dateInterval: '01.2023 — 06.2023',
+  //   dateFrom: '01.2023',
+  //   dateTo: '06.2023',
+  //   companyName: 'UmbrellAI',
+  //   isPartTime: true,
+  //   companyLink: 'https://umbrell.ai',
+  //   projectUrl: 'https://umbrell.ai',
+  //   projects: [
+  //     {
+  //       name: 'UmbrellAI',
+  //       url: 'https://umbrell.ai'
+  //     },
+  //   ],
+  //   i8nCode: 'umbrellAi',
+  //   responsibilities: [
+  //     'Developing an insurance aggregation platform that lets users buy policies online.',
+  //     'Designing and implementing new features in <b>Vue, Nuxt, Node.js.</b>',
+  //     'Optimizing backend processes and integrating with insurer APIs.'
+  //   ],
+  //   skills: ['JavaScript', 'TypeScript', 'Vue', 'Nuxt', 'Docker', 'Node.js']
+  // },
   {
     jobPosition: 'Backend Developer',
     dateInterval: '2022 — 06.2023',
@@ -233,29 +244,30 @@ const experienceEn = ref([
     projectUrl: 'https://silkycoders.pl',
     i8nCode: 'silkyCoders',
     responsibilities: [
-      'Redesigning <b>legacy, low-performance functionalities</b> and developing a retail product management system.',
-      'Implementing <b>DDD</b> and <b>CQRS</b> to improve performance and data management.',
-      'Introducing automated unit and integration tests.'
+      'Refactoring <b>legacy</b> modules of a retail product management system — carving out domains and untangling dependencies.',
+      'Migrating the application to a <b>DDD</b>-based architecture, with testability as the driver.',
+      'Containerizing environments with <b>Docker</b> and preparing services to run on <b>Kubernetes</b>.',
+      'Reviewing technical options and sizing work together with the team.',
     ],
-    skills: ["PHP", 'Symfony', 'Docker', 'Jenkins', 'DDD', 'Scrum']
+    skills: ["PHP", 'Symfony', 'Docker', 'Kubernetes', 'DDD', 'Scrum']
   },
-  {
-    jobPosition: 'Founder',
-    dateInterval: '2019 — 2023',
-    dateFrom: '2019',
-    dateTo: '2023',
-    isPartTime: true,
-    companyName: 'Fashionly',
-    companyLink: 'https://www.pkowalczyk.dev',
-    i8nCode: 'fashionly',
-    responsibilities: [
-      'Building an application aggregating affiliate fashion products.',
-    ],
-    skills: ["PHP", 'Symfony', 'JavaScript', 'Vue', 'Nuxt', 'Docker']
-  },
+  // {
+  //   jobPosition: 'Founder',
+  //   dateInterval: '2019 — 2023',
+  //   dateFrom: '2019',
+  //   dateTo: '2023',
+  //   isPartTime: true,
+  //   companyName: 'Fashionly',
+  //   companyLink: 'https://www.pkowalczyk.dev',
+  //   i8nCode: 'fashionly',
+  //   responsibilities: [
+  //     'Building an application aggregating affiliate fashion products.',
+  //   ],
+  //   skills: ["PHP", 'Symfony', 'JavaScript', 'Vue', 'Nuxt', 'Docker']
+  // },
   {
     jobPosition: 'Fullstack Developer',
-    dateInterval: '03.2018 — 2019',
+    dateInterval: '03.2018 — 2022',
     dateFrom: '03.2018',
     dateTo: '2019',
     companyName: 'Comperia',
@@ -277,10 +289,13 @@ const experienceEn = ref([
     ],
     i8nCode: 'firstComperia',
     responsibilities: [
-      'Developing and maintaining financial systems, and migrating them to Google Cloud Platform.',
-      'Designing microservice architecture and integrating banking APIs.'
+      'Migrating the <b>Telepolis.pl</b> portal from an in-house system to <b>Symfony</b> — rewriting the data model and the presentation layer.',
+      'Implementing a <b>chatbot</b> supporting the customer service team.',
+      'Developing <b>ComperiaRaty.pl</b> and <b>Comfino.pl</b> — financing application flows and partner API integrations.',
+      'Designing services running on <b>Docker/Kubernetes</b> on <b>Google Cloud Platform</b>, with <b>RabbitMQ</b> queues.',
+      'Building <b>Vue/Nuxt</b> interfaces and <b>Node.js</b> services.',
     ],
-    skills: ["PHP", 'Symfony', 'JavaScript', 'Vue', 'Nuxt', 'K8S', 'Docker', 'Google Cloud Platform', 'Microservices']
+    skills: ["PHP", 'Symfony', 'JavaScript', 'Node.js', 'Nuxt', 'Vue', 'Kubernetes', 'Docker', 'Google Cloud Platform', 'RabbitMQ']
   },
   {
     jobPosition: 'Fullstack Developer',
@@ -290,10 +305,12 @@ const experienceEn = ref([
     companyName: 'Konsult Expert',
     i8nCode: 'konsultExpert',
     responsibilities: [
-      'Developing a medical platform for online consultations.',
-      'Creating new backend and frontend functionalities.',
+      'Developing a medical platform for online consultations — <b>Symfony</b> backend, <b>Twig/jQuery</b> view layer.',
+      'Implementing video calls, chat and file exchange on top of <b>Twilio</b>.',
+      'Integrating <b>Przelewy24</b> online payments.',
+      'Working with a designer to ship a responsive user interface.',
     ],
-    skills: ["PHP", 'Symfony', 'JavaScript']
+    skills: ["PHP", 'Symfony', 'JavaScript', 'Twig', 'jQuery']
   }
 ])
 
@@ -345,11 +362,48 @@ const education = computed(() => {
   return locale.value === 'pl' ? educationPl.value : educationEn.value
 })
 
-const skills = ref<string[]>([]);
-for (const exp of experiencePl.value) {
-  skills.value = skills.value.concat(exp.skills);
-}
-skills.value = [...new Set(skills.value)];
+// Grouped instead of derived from `experience` — a flat cloud of every tag ever used
+// reads like a keyword dump; recruiters scan a CV by category.
+// Keep both arrays in lockstep, same as `experiencePl` / `experienceEn`.
+const skillGroupsPl = [
+  { label: 'Języki', items: ['PHP', 'JavaScript', 'TypeScript', 'SQL'] },
+  { label: 'Backend', items: ['Symfony', 'Node.js', 'REST API', 'RabbitMQ', 'DDD', 'CQRS'] },
+  { label: 'Infrastruktura i chmura', items: ['Docker', 'Kubernetes', 'Google Cloud Platform', 'CI/CD', 'Git'] },
+  {
+    label: 'AI w inżynierii',
+    items: [
+      'Claude / Claude Code',
+      'OpenAI Codex',
+      'Budowa agentów AI',
+      'Integracja LLM',
+      'MCP',
+      'Bezpieczne wdrażanie narzędzi AI',
+    ]
+  },
+  { label: 'Praktyki', items: ['Code review', 'TDD', 'Monitoring', 'Mentoring', 'Scrum'] },
+]
+
+const skillGroupsEn = [
+  { label: 'Languages', items: ['PHP', 'JavaScript', 'TypeScript', 'SQL'] },
+  { label: 'Backend', items: ['Symfony', 'Node.js', 'REST API', 'RabbitMQ', 'DDD', 'CQRS'] },
+  { label: 'Infrastructure & Cloud', items: ['Docker', 'Kubernetes', 'Google Cloud Platform', 'CI/CD', 'Git'] },
+  {
+    label: 'AI engineering',
+    items: [
+      'Claude / Claude Code',
+      'OpenAI Codex',
+      'Building AI agents',
+      'LLM integration',
+      'MCP',
+      'Secure AI tooling rollout',
+    ]
+  },
+  { label: 'Practices', items: ['Code review', 'TDD', 'Monitoring', 'Mentoring', 'Scrum'] },
+]
+
+const skillGroups = computed(() => {
+  return locale.value === 'pl' ? skillGroupsPl : skillGroupsEn
+})
 
 const route = useRoute();
 const cvClause = useI18n().t('cvClause');
@@ -374,21 +428,52 @@ const cvClauseFinal = cvClause.replace('__COMPANY_NAMES__', companyNames);
         <a href="/">Przemek Kowalczyk</a>
       </h1>
       <h2 class="mt-3 text-lg font-medium tracking-tight text-gray-400 sm:text-xl">
-        Senior Full Stack Developer
+        Software Engineer
       </h2>
-      <p class="mt-4 max-w-md">{{ $t('tagline') }}</p>
-      <ul class="experience__tech my-5 lg:mt-2 flex flex-wrap lg:mr-32">
-        <li
-          v-for="skill in skills"
-          class="mr-1.5 mt-2"
-        >
-          <div
-            class="flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5">
-            {{ skill }}
-          </div>
+      <p class="mt-4 max-w-2xl text-sm leading-relaxed">{{ $t('cvSummary') }}</p>
+
+      <ul class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm" aria-label="Contact">
+        <li>
+          <a href="mailto:kontakt@pkowalczyk.dev">kontakt@pkowalczyk.dev</a>
+        </li>
+        <li>
+          <a href="tel:+48796069415">+48 796 069 415</a>
+        </li>
+        <li>
+          <a href="https://www.pkowalczyk.dev" target="_blank" rel="noreferrer noopener">pkowalczyk.dev</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/pekowal" target="_blank" rel="noreferrer noopener">linkedin.com/in/pekowal</a>
+        </li>
+        <li>
+          <a href="https://github.com/codeair18" target="_blank" rel="noreferrer noopener">github.com/codeair18</a>
         </li>
       </ul>
     </div>
+
+    <section id="skills" class="mt-10">
+      <UPageHeader :title="$t('skills')" class="my-2"/>
+      <div
+        v-for="group in skillGroups"
+        :key="group.label"
+        class="grid grid-cols-6 gap-4 mb-2"
+      >
+        <header class="z-10 mb-2 mt-3 text-xs font-semibold uppercase tracking-wide col-span-1">
+          {{ group.label }}
+        </header>
+        <ul class="experience__tech col-span-5 flex flex-wrap">
+          <li
+            v-for="skill in group.items"
+            :key="skill"
+            class="mr-1.5 mt-2"
+          >
+            <div class="flex items-center rounded-full px-3 py-1 text-xs font-medium leading-5">
+              {{ skill }}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section class="experience">
       <UPageHeader :title="$t('experience')" class="my-2"/>
       <div
@@ -520,21 +605,6 @@ const cvClauseFinal = cvClause.replace('__COMPANY_NAMES__', companyNames);
             d="M295.42,6c-53.2,2.51-89.53,11-121.29,23.48-32.87,12.81-60.73,30-88.45,57.82S40.89,143,28.17,175.92c-12.31,31.83-20.65,68.19-23,121.42S2.3,367.68,2.56,503.46,3.42,656.26,6,709.6c2.54,53.19,11,89.51,23.48,121.28,12.83,32.87,30,60.72,57.83,88.45S143,964.09,176,976.83c31.8,12.29,68.17,20.67,121.39,23s70.35,2.87,206.09,2.61,152.83-.86,206.16-3.39S799.1,988,830.88,975.58c32.87-12.86,60.74-30,88.45-57.84S964.1,862,976.81,829.06c12.32-31.8,20.69-68.17,23-121.35,2.33-53.37,2.88-70.41,2.62-206.17s-.87-152.78-3.4-206.1-11-89.53-23.47-121.32c-12.85-32.87-30-60.7-57.82-88.45S862,40.87,829.07,28.19c-31.82-12.31-68.17-20.7-121.39-23S637.33,2.3,501.54,2.56,348.75,3.4,295.42,6m5.84,903.88c-48.75-2.12-75.22-10.22-92.86-17-23.36-9-40-19.88-57.58-37.29s-28.38-34.11-37.5-57.42c-6.85-17.64-15.1-44.08-17.38-92.83-2.48-52.69-3-68.51-3.29-202s.22-149.29,2.53-202c2.08-48.71,10.23-75.21,17-92.84,9-23.39,19.84-40,37.29-57.57s34.1-28.39,57.43-37.51c17.62-6.88,44.06-15.06,92.79-17.38,52.73-2.5,68.53-3,202-3.29s149.31.21,202.06,2.53c48.71,2.12,75.22,10.19,92.83,17,23.37,9,40,19.81,57.57,37.29s28.4,34.07,37.52,57.45c6.89,17.57,15.07,44,17.37,92.76,2.51,52.73,3.08,68.54,3.32,202s-.23,149.31-2.54,202c-2.13,48.75-10.21,75.23-17,92.89-9,23.35-19.85,40-37.31,57.56s-34.09,28.38-57.43,37.5c-17.6,6.87-44.07,15.07-92.76,17.39-52.73,2.48-68.53,3-202.05,3.29s-149.27-.25-202-2.53m407.6-674.61a60,60,0,1,0,59.88-60.1,60,60,0,0,0-59.88,60.1M245.77,503c.28,141.8,115.44,256.49,257.21,256.22S759.52,643.8,759.25,502,643.79,245.48,502,245.76,245.5,361.22,245.77,503m90.06-.18a166.67,166.67,0,1,1,167,166.34,166.65,166.65,0,0,1-167-166.34"></path>
         </svg>
       </a></li>
-      <li class="mr-5 text-xs shrink-0 cursor-pointer">
-        <a class="cursor-pointer">
-          kontakt@pkowalczyk.dev
-        </a>
-      </li>
-      <li class="mr-5 text-xs shrink-0 cursor-pointer">
-        <a class="cursor-pointer">
-          codeair18@gmail.com
-        </a>
-      </li>
-      <li class="mr-5 text-xs shrink-0 cursor-pointer">
-        <a class="cursor-pointer">
-          +48 796 069 415
-        </a>
-      </li>
     </ul>
 
     <section class="my-5">

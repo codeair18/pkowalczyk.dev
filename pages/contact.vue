@@ -60,17 +60,10 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { property: 'og:title', content: 'Contact - Przemek Kowalczyk' },
-    { property: 'og:description', content: 'Contact information for Przemek Kowalczyk' },
-    { property: 'og:image', content: 'https://pkowalczyk.dev/static/preview.png' },
-    { property: 'og:url', content: 'https://pkowalczyk.dev/contact' },
-    { property: 'og:type', content: 'website' }
-  ],
-  title: 'Contact - Przemek Kowalczyk',
+useStaticPageSeo({
+  title: 'Contact',
+  description: 'Contact information for Przemek Kowalczyk',
+  path: '/contact',
 })
 </script>
 
