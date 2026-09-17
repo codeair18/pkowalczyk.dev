@@ -126,6 +126,15 @@
 <!--        </li>-->
         <li class="mr-5 text-xs shrink-0 cursor-pointer">
           <NuxtLink
+            to="/cv"
+            aria-label="CV"
+            title="CV">
+            <span class="sr-only">CV</span>
+            <UIcon name="i-ph-read-cv-logo" class="h-6 w-6 opacity-80 hover:opacity-100 transition-opacity"/>
+          </NuxtLink>
+        </li>
+        <li class="mr-5 text-xs shrink-0 cursor-pointer">
+          <NuxtLink
             to="/certifications"
             aria-label="Certifications"
             title="Certifications">
